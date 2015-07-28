@@ -1,0 +1,27 @@
+{
+  "name": "Team",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Name": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "members": {
+      "type": "hasAndBelongsToMany",
+      "model": "Profile",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

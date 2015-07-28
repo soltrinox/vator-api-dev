@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "sources": [
+      "../common/models",
+      "./models",
+      "../node_modules/loopback-component-passport/lib/models"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public": false
+  },
+  "accessToken": {
+    "dataSource": "db",
+    "public": true
+  },
+  "userCredential": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "userIdentity": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "ACL": {
+    "dataSource": "MONGOLOCAL",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Role": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "AppModel": {
+    "dataSource": "MONGOLOCAL",
+    "public": false
+  },
+  "Review": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Page": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Note": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Post": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Setting": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Product": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Category": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Event": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "AuthProvider": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "user": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Profile": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Team": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "WorkHistory": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "keys": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Tag": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Social": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Education": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "EmailAddress": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Graph": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Media": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  }
+}

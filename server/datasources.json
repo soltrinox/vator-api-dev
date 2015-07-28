@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "MONGOLOCAL": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "url": "",
+    "database": "vator",
+    "password": "",
+    "name": "MONGOLOCAL",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

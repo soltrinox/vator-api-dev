@@ -1,0 +1,36 @@
+{
+  "name": "Media",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Name": {
+      "type": "string"
+    },
+    "URI": {
+      "type": "string"
+    },
+    "SIZE": {
+      "type": "number"
+    },
+    "Created": {
+      "type": "date"
+    },
+    "Type": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "profile": {
+      "type": "belongsTo",
+      "model": "Profile",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

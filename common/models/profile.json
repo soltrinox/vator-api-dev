@@ -1,0 +1,69 @@
+{
+  "name": "Profile",
+  "plural": "Profiles",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Created": {
+      "type": "date"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "UUID": {
+      "type": "string",
+      "id": false
+    },
+    "Bio": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "teams": {
+      "type": "hasAndBelongsToMany",
+      "model": "Team",
+      "foreignKey": ""
+    },
+    "education": {
+      "type": "hasMany",
+      "model": "Education",
+      "foreignKey": ""
+    },
+    "emailAddresses": {
+      "type": "hasMany",
+      "model": "EmailAddress",
+      "foreignKey": ""
+    },
+    "socials": {
+      "type": "hasMany",
+      "model": "Social",
+      "foreignKey": ""
+    },
+    "roles": {
+      "type": "hasAndBelongsToMany",
+      "model": "keys",
+      "foreignKey": ""
+    },
+    "experience": {
+      "type": "hasMany",
+      "model": "WorkHistory",
+      "foreignKey": ""
+    },
+    "graphs": {
+      "type": "hasAndBelongsToMany",
+      "model": "Graph",
+      "foreignKey": ""
+    },
+    "media": {
+      "type": "hasMany",
+      "model": "Media",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

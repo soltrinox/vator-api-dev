@@ -1,0 +1,36 @@
+<div class="login-form" >
+  <form name="joinForm" class="form-signin" role="form" ng-submit="register()">
+    <div class="top">
+      <img src="../../../img/dashboard/vator_logo.png" alt="icon" >
+      <h4>Register, join the vator community  !</h4>
+    </div>
+
+    <div class="form-area">
+
+      <auto:fields fields="schema" data="registration" options="options"></auto:fields>
+
+
+      <!-- <div class="group">
+        <input type="text" class="form-control" placeholder="Username">
+        <i class="fa fa-user"></i>
+      </div>
+      <div class="group">
+        <input type="text" class="form-control" placeholder="E-mail">
+        <i class="fa fa-envelope-o"></i>
+      </div>
+      <div class="group">
+        <input type="password" class="form-control" placeholder="Password">
+        <i class="fa fa-key"></i>
+      </div>
+      <div class="group">
+        <input type="password" class="form-control" placeholder="Password again">
+        <i class="fa fa-key"></i>
+      </div> -->
+      <button type="submit" class="btn btn-default btn-block" ng-class="{'btn-primary':joinForm.$valid}" translate >REGISTER NOW</button>
+    </div>
+  </form>
+  <div class="footer-links row">
+    <div class="col-xs-6"><a href="#/login"><i class="fa fa-sign-in"></i> Login</a></div>
+    <div class="col-xs-6 text-right"><a href="#"><i class="fa fa-lock"></i> Forgot password</a></div>
+  </div>
+</div>

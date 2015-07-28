@@ -1,0 +1,172 @@
+<h4>
+  <a href="" ui-sref="^.list" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+  <span ng-show="!profile.id" translate>Add a new profile</span>
+  <span ng-show="profile.id" translate>Edit profile</span>
+</h4>
+
+<div class="container col-lg-12 col-md-12">
+  <div class="alert alert-danger" ng-if="addError" translate>Could not add profile!</div>
+  <tabset class="nav-tabs-custom">
+    <tab heading="{{ 'Profile' | translate }}">
+      <div class="row tab-pane">
+        <!--  contact for email here ??? -->
+        <formly-form result="profile" fields="formFields" options="formOptions" ng-submit="onSubmit()"></formly-form>
+        <div class="controls">
+          <button class="btn btn-primary btn-success" ng-click="onSubmit()" translate>Submit</button>
+        </div>
+      </div>
+    </tab>
+    <tab heading="{{ 'Credentials' | translate }}">
+      <div class="row tab-pane">
+
+        <formly-form result="education" fields="formFields2" options="formOptions" ng-submit="onSubmit2()"></formly-form>
+        <div class="controls">
+          <button class="btn btn-primary btn-success" ng-click="onSubmit2()" translate>Add Credials</button>
+        </div>
+      </div>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td class="text-center"><i class="fa fa-trash"></i></td>
+            <td>Degree</td>
+            <td>Dates</td>
+            <td>Name</td>
+            <td>Desc</td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">
+              <div class="checkbox margin-t-0">
+                <input id="checkbox1" type="checkbox">
+                <label for="checkbox1"></label>
+              </div>
+            </td>
+            <td>BS - Computer Engineering</td>
+            <td>2002</td>
+            <td>Stanford University</td>
+            <td>http://www.stanford.edu</td>
+            <td> <a href="#" class="btn btn-warning ">Edit</a> </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </tab>
+    <tab heading="{{ 'Experience' | translate }}">
+      <div class="row tab-pane">
+
+        <formly-form result="profile" fields="formFields3" options="formOptions" ng-submit="onSubmit3()"></formly-form>
+        <div class="controls">
+          <button class="btn btn-primary btn-success" ng-click="onSubmit3()" translate>Add Experience </button>
+        </div>
+      </div>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td class="text-center"><i class="fa fa-trash"></i></td>
+            <td>Position</td>
+            <td>Dates</td>
+            <td>Name</td>
+            <td>URL</td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">
+              <div class="checkbox margin-t-0">
+                <input id="checkbox1" type="checkbox">
+                <label for="checkbox1"></label>
+              </div>
+            </td>
+            <td>Fulltme - Senior Computer Engineer</td>
+            <td>2003-2008</td>
+            <td>IBM</td>
+            <td>http://www.ibm.com</td>
+            <td> <a href="#" class="btn btn-warning ">Edit</a> </td>
+          </tr>
+
+        </tbody>
+      </table>
+      <a href="#" class="btn btn-info"><i class="fa fa-check"></i>Save</a>
+
+    </tab>
+    <tab heading="{{ 'Social' | translate }}">
+      <div class="row tab-pane ">
+        <!--  contact for email here too -->
+        <formly-form result="profile" fields="formFields4" options="formOptions" ng-submit="onSubmit4()"></formly-form>
+        <div class="controls">
+          <button class="btn btn-primary btn-success" ng-click="onSubmit4()" translate>Add Contact / Social Account</button>
+        </div>
+      </div>
+
+<div>
+<pre>{{$scope.MyProfile | json}}</pre>
+</div>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td class="text-center"><i class="fa fa-trash"></i></td>
+            <td></td>
+            <td>Site</td>
+
+            <td></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">
+              <div class="checkbox margin-t-0">
+                <input id="checkbox1" type="checkbox">
+                <label for="checkbox1"></label>
+              </div>
+            </td>
+            <td><i class="fa fa-facebook"></i>&nbsp; &nbsp;Facebook</td>
+            <td>http://www.facebook.com</td>
+            <td> <a href="#" class="btn btn-warning ">Edit</a> </td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <div class="checkbox margin-t-0">
+                <input id="checkbox1" type="checkbox">
+                <label for="checkbox1"></label>
+              </div>
+            </td>
+            <td><i class="fa fa-twitter"></i>&nbsp; &nbsp;Twitter</td>
+            <td>http://www.twitter.com</td>
+            <td> <a href="#" class="btn btn-warning ">Edit</a> </td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <div class="checkbox margin-t-0">
+                <input id="checkbox1" type="checkbox">
+                <label for="checkbox1"></label>
+              </div>
+            </td>
+            <td><i class="fa fa-github"></i>&nbsp; &nbsp;Github</td>
+            <td>http://www.github.com/profilename</td>
+            <td> <a href="#" class="btn btn-warning ">Edit</a> </td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <div class="checkbox margin-t-0">
+                <input id="checkbox1" type="checkbox">
+                <label for="checkbox1"></label>
+              </div>
+            </td>
+            <td><i class="fa fa-link"></i>&nbsp; &nbsp;Web</td>
+            <td>http://www.myblog.com</td>
+            <td> <a href="#" class="btn btn-warning ">Edit</a> </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <a href="#" class="btn btn-info"><i class="fa fa-check"></i>Save</a>
+    </tab>
+  </tabset>
+</div>

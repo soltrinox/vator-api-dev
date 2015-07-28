@@ -1,0 +1,33 @@
+{
+  "name": "WorkHistory",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "companyname": {
+      "type": "string"
+    },
+    "jobtitle": {
+      "type": "string"
+    },
+    "datestart": {
+      "type": "date"
+    },
+    "dateend": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "profile": {
+      "type": "belongsTo",
+      "model": "Profile",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

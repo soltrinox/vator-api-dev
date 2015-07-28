@@ -1,0 +1,36 @@
+{
+  "name": "Education",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "School": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "Major": {
+      "type": "string"
+    },
+    "Degree": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "profile": {
+      "type": "belongsTo",
+      "model": "Profile",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

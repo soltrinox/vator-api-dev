@@ -1,0 +1,421 @@
+<section class="content-header">
+  <div class="pull-right">
+  </div>
+  <h1>{{ 'Dashboard' | translate }} <small translate>Welcome {{$scope.currentUser.name}}!</small>
+</h1>
+</section>
+
+<section class="content">
+
+  <div class="container-widget">
+    <!-- Start Options Row -->
+    <div class="row">
+      <div class="col-md-12 ">
+        <div class="panel panel-widget " style="background:#B6DEE4">
+          <div class="panel-title" style="background:#B6DEE4">
+            Profile Enhancement <span class="label label-danger">UPDATE</span>
+            <ul class="panel-tools">
+              <li><a class="icon minimise-tool"><i class="fa fa-minus"></i></a></li>
+              <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+            </ul>
+          </div>
+          <div class="panel-body">
+
+            <div class="col-md-4">
+
+              <a href="entrepreneur/company.html" class="btn btn-default"><i class="fa fa-rocket"></i>Add Your Startup</a>
+
+              <h4>Got a startup?</h4>
+              <!-- Start TwitterBox -->
+              <div class="widget socialbox" style="background:#02A8F3; height:205px;">
+
+                <p class="text">
+                  Are you in a startup? Register as an entrprenuer today!
+                </p>
+
+
+                <div class="logo"><i class="fa fa-rocket"></i></div>
+
+                <ul class="info">
+                  <li><i class="fa fa-user"></i>235</li>
+
+                </ul>
+
+              </div>
+              <!-- End TwitterBox -->
+            </div>
+
+
+            <div class="col-md-4">
+
+              <a href="#" class="btn btn-primary"><i class="fa fa-bank"></i>Find Investments</a>
+
+              <h4>Do you invest?</h4>
+              <!-- Start FacebookBox -->
+              <div class="widget socialbox" style="background:#47639E; height:205px;">
+
+                <p class="text">
+                  Find the hottest startups to back. Join the Vator Investment Club.
+                </p>
+
+
+                <div class="logo"><i class="fa fa-bank"></i></div>
+
+                <ul class="info">
+                  <li><i class="fa fa-user"></i>131</li>
+
+                </ul>
+
+              </div>
+              <!-- End FacebookBox -->
+            </div>
+
+            <div class="col-md-4">
+
+              <a href="#" class="btn btn-basic"><i class="fa fa-trophy"></i>Find A Competition</a>
+
+              <h4>Got Skills?</h4>
+              <!-- Start FacebookBox -->
+              <div class="widget socialbox" style="background:#ABABAB; height:205px;">
+
+                <p class="text">
+                  Join a competition and get funded.
+                </p>
+
+
+                <div class="logo"><i class="fa fa-trophy"></i></div>
+
+                <ul class="info">
+                  <li><i class="fa fa-user"></i>12</li>
+
+                </ul>
+
+              </div>
+              <!-- End FacebookBox -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-widget">
+    <!-- Start Row -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-widget">
+
+          <div class="panel-title">
+            Create Post
+            <ul class="panel-tools">
+              <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+            </ul>
+          </div>
+          <div class="panel-body">
+            <form>
+              <p>
+                <textarea class="textarea form-control wysihtml5-textarea" placeholder="Enter text ..." style="height:100px; width:100%;"></textarea>
+              </p>
+              <button class="btn btn-warning fa fa-smile-o"> Icons</button>
+              <button class="btn btn-info fa fa-image"> Upload Image</button>
+              <button class="btn btn-default fa fa-thumb-tack"> Post</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Row -->
+  </div>
+
+  <!-- <div class="container-widget">
+    <div class="row">
+      <div class="col-xs-12">
+        <tabset class="nav-tabs-custom">
+          <tab heading="{{ 'Dashboard' | translate }}">
+            <div class="row">
+
+              <small-box name="{{ box.name }}" color="{{ box.color }}" icon="{{ box.icon }}" quantity="{{ box.quantity }}" href="{{ box.href }}" ng-repeat="box in boxes | orderBy:['-quantity', 'name']"></small-box>
+
+            </div>
+          </tab>
+        </tabset>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container-widget">
+
+    <!-- Start Activity Row -->
+    <div class="row">
+      <div class="col-md-12 ">
+        <div class="panel panel-widget ">
+          <div class="panel-title">
+            Activity Stream <span class="label label-default">NEW</span>
+            <ul class="panel-tools">
+              <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+            </ul>
+          </div>
+          <div class="panel-body">
+            <div class="float-r margin-b-10">
+              <div class="btn-group" role="group" aria-label="...">
+                <a href="#" class="btn btn-light"><i class="fa fa-newspaper-o"></i>Latest News</a>
+                <a href="#" class="btn btn-light"><i class="fa fa-refresh"></i> Refresh</a>
+                <a href="#" class="btn btn-light"><i class="fa fa-search"></i> Search</a>
+                <a href="#" class="btn btn-light"><i class="fa fa-sort"></i> Sort</a>
+              </div>
+            </div>
+
+
+
+            <!-- Start Social Content -->
+            <div class="social-content clearfix">
+
+
+
+
+
+              <!-- Start Left -->
+              <div class="col-md-6 col-lg-4">
+
+                <!-- Start Post -->
+                <div class="panel panel-default">
+                  <div class="panel-body status">
+                    <ul class="panel-tools panel-tools-hover">
+                      <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+                      <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+                    </ul>
+                    <div class="who clearfix">
+                      <img src="/img/dashboard/profileimg4.png" alt="img">
+                      <span class="name"><b>vator Ka</b> shared a post</span>
+                      <span class="from"><b>1 days ago</b> via Mobile, New York</span>
+                    </div>
+                    <div class="text">Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</div>
+                    <ul class="links">
+                      <li><a href="#"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                      <li><a href="#"><i class="fa fa-comment-o"></i> Comment</a></li>
+                      <li><a href="#"><i class="fa fa-share-square-o"></i> Share</a></li>
+                    </ul>
+                    <ul class="comments">
+                      <li>
+                        <img src="/img/dashboard/profileimg2.png" alt="img">
+                        <span class="name">John Doe</span> It is a historical process which mankind is carrying out in accordance with the natural laws of human development.
+                      </li>
+                      <li>
+                        <img src="/img/dashboard/profileimg3.png" alt="img">
+                        <span class="name">William Throwing</span> Seems cool.
+                      </li>
+                      <li>
+                        <img src="/img/dashboard/profileimg.png" alt="img">
+                        <input type="text" class="form-control" placeholder="Post your comment...">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Post -->
+
+                <!-- Start Post -->
+                <div class="panel panel-default">
+                  <div class="panel-body status">
+                    <ul class="panel-tools panel-tools-hover">
+                      <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+                      <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+                    </ul>
+                    <div class="who clearfix">
+                      <img src="/img/dashboard/profileimg2.png" alt="img">
+                      <span class="name"><b>John Doe</b> shared a post</span>
+                      <span class="from"><b>1 days ago</b> via Mobile, New York</span>
+                    </div>
+                    <div class="text">
+                      <p>
+                        Astronomy compels the soul to look upward, and leads us from this world to another. That's one small step for [a] man, one giant leap for mankind. I don't know what you could say about a day in which you have seen four beautiful sunsets. Where ignorance
+                        lurks, so too do the frontiers of discovery and imagination. We want to explore. We’re curious people. Look back over history, people have put their lives at stake to go out and explore … We believe in what we’re doing. Now it’s
+                        time to go. The regret on our side is, they used to say years ago, we are reading about you in science class. Now they say, we are reading about you in history class.</p>
+
+                      There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning. Across the sea of space,
+                      the stars are other suns.
+                    </div>
+                    <ul class="links">
+                      <li><a href="#"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                      <li><a href="#"><i class="fa fa-comment-o"></i> Comment</a></li>
+                      <li><a href="#"><i class="fa fa-share-square-o"></i> Share</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Post -->
+
+                <!-- Start Post -->
+                <div class="panel panel-default">
+                  <div class="panel-body status">
+                    <ul class="panel-tools panel-tools-hover">
+                      <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+                      <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+                    </ul>
+                    <div class="who clearfix">
+                      <img src="/img/dashboard/profileimg4.png" alt="img">
+                      <span class="name"><b>Junior Doe</b> send you a message</span>
+                      <span class="from"><b>1 days ago</b> via Mobile, New York</span>
+                    </div>
+                    <div class="text">The dreams of yesterday are the hopes of today and the reality of tomorrow.</div>
+                    <ul class="links">
+                      <li><a href="#"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                      <li><a href="#"><i class="fa fa-comment-o"></i> Comment</a></li>
+                      <li><a href="#"><i class="fa fa-share-square-o"></i> Share</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Post -->
+
+              </div>
+              <!-- End Left -->
+
+
+              <!-- Start Middle -->
+              <div class="col-md-6 col-lg-4">
+
+                <!-- Start Post -->
+                <div class="panel panel-default">
+                  <div class="panel-body status">
+                    <ul class="panel-tools panel-tools-hover">
+                      <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+                      <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+                    </ul>
+                    <div class="who clearfix">
+                      <img src="/img/dashboard/profileimg4.png" alt="img">
+                      <span class="name"><b>vator Ka</b> shared a photo</span>
+                      <span class="from"><b>1 days ago</b> via Mobile, New York</span>
+                    </div>
+                    <div class="image"><img src="/img/dashboard/example1.jpg" alt="img"></div>
+                    <ul class="links">
+                      <li><a href="#"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                      <li><a href="#"><i class="fa fa-comment-o"></i> Comment</a></li>
+                      <li><a href="#"><i class="fa fa-share-square-o"></i> Share</a></li>
+                    </ul>
+                    <ul class="comments">
+                      <li>
+                        <img src="/img/dashboard/profileimg2.png" alt="img">
+                        <span class="name">John Doe</span> It is a historical process which mankind is carrying out in accordance with the natural laws of human development.
+                      </li>
+                      <li>
+                        <img src="/img/dashboard/profileimg3.png" alt="img">
+                        <span class="name">William Throwing</span> Seems cool.
+                      </li>
+                      <li>
+                        <img src="/img/dashboard/profileimg.png" alt="img">
+                        <input type="text" class="form-control" placeholder="Post your comment...">
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Post -->
+
+                <!-- Start Post -->
+                <div class="panel panel-default">
+                  <div class="panel-body status">
+                    <ul class="panel-tools panel-tools-hover">
+                      <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+                      <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+                    </ul>
+                    <div class="who clearfix">
+                      <img src="/img/dashboard/profileimg5.png" alt="img">
+                      <span class="name"><b>John Doe</b> shared a post</span>
+                      <span class="from"><b>1 days ago</b> via Mobile, New York</span>
+                    </div>
+                    <div class="text">
+                      Astronomy compels the soul to look upward, and leads us from this world to another.
+                    </div>
+                    <ul class="links">
+                      <li><a href="#"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                      <li><a href="#"><i class="fa fa-comment-o"></i> Comment</a></li>
+                      <li><a href="#"><i class="fa fa-share-square-o"></i> Share</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Post -->
+
+              </div>
+              <!-- End Middle -->
+
+
+              <!-- Start Right -->
+              <div class="col-md-6 col-lg-4">
+
+                <!-- Start Post -->
+                <div class="panel panel-default">
+                  <div class="panel-body status">
+                    <ul class="panel-tools panel-tools-hover">
+                      <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+                      <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+                    </ul>
+                    <div class="who clearfix">
+                      <img src="/img/dashboard/profileimg3.png" alt="img">
+                      <span class="name"><b>John Meight</b> send you a message</span>
+                      <span class="from"><b>1 days ago</b> via Mobile, New York</span>
+                    </div>
+                    <div class="text">Happy Birthday m8.</div>
+                    <ul class="links">
+                      <li><a href="#"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                      <li><a href="#"><i class="fa fa-comment-o"></i> Comment</a></li>
+                      <li><a href="#"><i class="fa fa-share-square-o"></i> Share</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Post -->
+
+                <!-- Start Post -->
+                <div class="panel panel-default">
+                  <div class="panel-body status">
+                    <ul class="panel-tools panel-tools-hover">
+                      <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+                      <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+                    </ul>
+                    <div class="who clearfix">
+                      <img src="/img/dashboard/profileimg6.png" alt="img">
+                      <span class="name"><b>Jane Doe</b> send you a message</span>
+                      <span class="from"><b>1 days ago</b> via Mobile, New York</span>
+                    </div>
+                    <div class="text">I don't know what you could say about a day in which you have seen four beautiful sunsets</div>
+                    <ul class="links">
+                      <li><a href="#"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                      <li><a href="#"><i class="fa fa-comment-o"></i> Comment</a></li>
+                      <li><a href="#"><i class="fa fa-share-square-o"></i> Share</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Post -->
+
+                <!-- Start Post -->
+                <div class="panel panel-default">
+                  <div class="panel-body status">
+                    <ul class="panel-tools panel-tools-hover">
+                      <li><a class="icon expand-tool"><i class="fa fa-expand"></i></a></li>
+                      <li><a class="icon closed-tool"><i class="fa fa-times"></i></a></li>
+                    </ul>
+                    <div class="who clearfix">
+                      <img src="/img/dashboard/profileimg2.png" alt="img">
+                      <span class="name"><b>Heikan Doe</b> send you a message</span>
+                      <span class="from"><b>1 days ago</b> via Mobile, New York</span>
+                    </div>
+                    <div class="text">You know, being a test pilot isn't always the healthiest business in the world.</div>
+                    <ul class="links">
+                      <li><a href="#"><i class="fa fa-thumbs-o-up"></i> Like</a></li>
+                      <li><a href="#"><i class="fa fa-comment-o"></i> Comment</a></li>
+                      <li><a href="#"><i class="fa fa-share-square-o"></i> Share</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Post -->
+
+              </div>
+              <!-- End Right -->
+
+            </div>
+            <!-- End Social Content -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Activity Row -->
+  </div>
+
+</section>

@@ -1,0 +1,33 @@
+{
+  "name": "EmailAddress",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "contactvalue": {
+      "type": "string"
+    },
+    "ctype": {
+      "type": "string"
+    },
+    "created": {
+      "type": "date"
+    },
+    "verified": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "profile": {
+      "type": "belongsTo",
+      "model": "Profile",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

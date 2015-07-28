@@ -1,0 +1,39 @@
+{
+  "name": "Social",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Type": {
+      "type": "string"
+    },
+    "Value": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "created": {
+      "type": "date"
+    },
+    "status": {
+      "type": "number"
+    },
+    "verified": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "profile": {
+      "type": "belongsTo",
+      "model": "Profile",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

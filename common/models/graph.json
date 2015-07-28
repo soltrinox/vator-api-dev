@@ -1,0 +1,35 @@
+{
+  "name": "Graph",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Created": {
+      "type": "date"
+    },
+    "Type": {
+      "type": "number"
+    },
+    "Status": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "refer": {
+      "type": "belongsTo",
+      "model": "Profile",
+      "foreignKey": ""
+    },
+    "profiles": {
+      "type": "hasAndBelongsToMany",
+      "model": "Profile",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

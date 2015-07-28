@@ -1,0 +1,35 @@
+
+{
+  "name": "keys",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "kname": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "parent": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "profiles": {
+      "type": "hasAndBelongsToMany",
+      "model": "Profile",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}
+
