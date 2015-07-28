@@ -20,7 +20,9 @@
       "type": "date"
     },
     "achievements":{
-      "type" : "string"
+      "type" :  [
+        "object"
+      ]
     }
   },
   "validations": [],
