@@ -1,3 +1,3 @@
-module.exports = function(Keys) {
+module.exports = function(keys) {
 
 };
