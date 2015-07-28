@@ -18,6 +18,9 @@
     },
     "dateend": {
       "type": "date"
+    },
+    "achievements":{
+      "type" : "string"
     }
   },
   "validations": [],
