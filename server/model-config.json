@@ -7,11 +7,11 @@
     ]
   },
   "User": {
-    "dataSource": "db",
+    "dataSource": "MONGOLOCAL",
     "public": false
   },
   "accessToken": {
-    "dataSource": "db",
+    "dataSource": "MONGOLOCAL",
     "public": true
   },
   "userCredential": {
