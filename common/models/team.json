@@ -12,6 +12,32 @@
     },
     "URL": {
       "type": "string"
+    },
+    "founded": {
+      "type": "string"
+    },
+    "pitch": {
+      "type": "string"
+    },
+    "tags": {
+      "type":[
+         "object"
+       ]
+    },
+    "cats": {
+      "type":[
+         "object"
+       ]
+    },
+    "owner": {
+      "type": [
+         "object"
+       ]
+    },
+    "location": {
+      "type": [
+         "object"
+       ]
     }
   },
   "validations": [],
