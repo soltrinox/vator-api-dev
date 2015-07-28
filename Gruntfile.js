@@ -606,8 +606,8 @@ module.exports = function (grunt) {
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
       return grunt.task.run([
-        'build',
-        'connect:dist:keepalive'
+        'build'
+//        'connect:dist:keepalive'
       ]);
     }
 
@@ -620,7 +620,7 @@ module.exports = function (grunt) {
       'wiredep:server',
       'concurrent:server',
       'autoprefixer',
-      'connect:livereload',
+//      'connect:livereload',
       'watch'
     ]);
   });
@@ -648,8 +648,8 @@ module.exports = function (grunt) {
     'includeSource:server',
     'wiredep:server',
     'concurrent:test',
-    'autoprefixer',
-    'connect:test'
+    'autoprefixer'
+ //   'connect:test'
   ]);
 
   grunt.registerTask('build', [
@@ -678,7 +678,7 @@ module.exports = function (grunt) {
     'test',
     'ngconstant:development',
     'loopback_sdk_angular:development',
-    'docular',
+  //  'docular',
     'nggettext_extract',
     'nggettext_compile',
     'build'
@@ -686,8 +686,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('loopback', [
     'ngconstant:development',
-    'loopback_sdk_angular:development',
-    'docular'
+    'loopback_sdk_angular:development'
+//    'docular'
   ]);
 
   grunt.registerTask('gettext', [
