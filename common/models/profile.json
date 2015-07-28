@@ -13,6 +13,15 @@
     "Name": {
       "type": "string"
     },
+    "ProfilePic": {
+      "type": "string"
+    },
+    "CoverPic": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "string"
+    },
     "UUID": {
       "type": "string",
       "id": false
