@@ -1,6 +1,6 @@
 (function(window, angular, undefined) {'use strict';
 
-var urlBase = "http://api.vator.co/api";
+var urlBase = "/api";
 var authHeader = 'authorization';
 
 /**
@@ -11995,6 +11995,33 @@ module.factory(
           method: "HEAD"
         },
 
+        // INTERNAL. Use Profile.investments.findById() instead.
+        "prototype$__findById__investments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Profiles/:id/investments/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Profile.investments.destroyById() instead.
+        "prototype$__destroyById__investments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Profiles/:id/investments/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Profile.investments.updateById() instead.
+        "prototype$__updateById__investments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Profiles/:id/investments/:fk",
+          method: "PUT"
+        },
+
         // INTERNAL. Use Profile.experience.findById() instead.
         "prototype$__findById__experience": {
           params: {
@@ -12260,6 +12287,31 @@ module.factory(
         // INTERNAL. Use Profile.teams.count() instead.
         "prototype$__count__teams": {
           url: urlBase + "/Profiles/:id/teams/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Profile.investments() instead.
+        "prototype$__get__investments": {
+          isArray: true,
+          url: urlBase + "/Profiles/:id/investments",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Profile.investments.create() instead.
+        "prototype$__create__investments": {
+          url: urlBase + "/Profiles/:id/investments",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Profile.investments.destroyAll() instead.
+        "prototype$__delete__investments": {
+          url: urlBase + "/Profiles/:id/investments",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Profile.investments.count() instead.
+        "prototype$__count__investments": {
+          url: urlBase + "/Profiles/:id/investments/count",
           method: "GET"
         },
 
@@ -13734,6 +13786,307 @@ module.factory(
         R.teams.updateById = function() {
           var TargetResource = $injector.get("Team");
           var action = TargetResource["::updateById::Profile::teams"];
+          return action.apply(R, arguments);
+        };
+    /**
+     * @ngdoc object
+     * @name lbServices.Profile.investments
+     * @header lbServices.Profile.investments
+     * @object
+     * @description
+     *
+     * The object `Profile.investments` groups methods
+     * manipulating `Investment` instances related to `Profile`.
+     *
+     * Call {@link lbServices.Profile#investments Profile.investments()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Profile#investments
+         * @methodOf lbServices.Profile
+         *
+         * @description
+         *
+         * Queries investments of Profile.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Investment` object.)
+         * </em>
+         */
+        R.investments = function() {
+          var TargetResource = $injector.get("Investment");
+          var action = TargetResource["::get::Profile::investments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Profile.investments#count
+         * @methodOf lbServices.Profile.investments
+         *
+         * @description
+         *
+         * Counts investments of Profile.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        R.investments.count = function() {
+          var TargetResource = $injector.get("Investment");
+          var action = TargetResource["::count::Profile::investments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Profile.investments#create
+         * @methodOf lbServices.Profile.investments
+         *
+         * @description
+         *
+         * Creates a new instance in investments of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Investment` object.)
+         * </em>
+         */
+        R.investments.create = function() {
+          var TargetResource = $injector.get("Investment");
+          var action = TargetResource["::create::Profile::investments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Profile.investments#createMany
+         * @methodOf lbServices.Profile.investments
+         *
+         * @description
+         *
+         * Creates a new instance in investments of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Investment` object.)
+         * </em>
+         */
+        R.investments.createMany = function() {
+          var TargetResource = $injector.get("Investment");
+          var action = TargetResource["::createMany::Profile::investments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Profile.investments#destroyAll
+         * @methodOf lbServices.Profile.investments
+         *
+         * @description
+         *
+         * Deletes all investments of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.investments.destroyAll = function() {
+          var TargetResource = $injector.get("Investment");
+          var action = TargetResource["::delete::Profile::investments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Profile.investments#destroyById
+         * @methodOf lbServices.Profile.investments
+         *
+         * @description
+         *
+         * Delete a related item by id for investments.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for investments
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.investments.destroyById = function() {
+          var TargetResource = $injector.get("Investment");
+          var action = TargetResource["::destroyById::Profile::investments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Profile.investments#findById
+         * @methodOf lbServices.Profile.investments
+         *
+         * @description
+         *
+         * Find a related item by id for investments.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for investments
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Investment` object.)
+         * </em>
+         */
+        R.investments.findById = function() {
+          var TargetResource = $injector.get("Investment");
+          var action = TargetResource["::findById::Profile::investments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Profile.investments#updateById
+         * @methodOf lbServices.Profile.investments
+         *
+         * @description
+         *
+         * Update a related item by id for investments.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for investments
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Investment` object.)
+         * </em>
+         */
+        R.investments.updateById = function() {
+          var TargetResource = $injector.get("Investment");
+          var action = TargetResource["::updateById::Profile::investments"];
           return action.apply(R, arguments);
         };
     /**
@@ -17671,6 +18024,65 @@ module.factory(
         "createChangeStream": {
           url: urlBase + "/Investments/change-stream",
           method: "POST"
+        },
+
+        // INTERNAL. Use Profile.investments.findById() instead.
+        "::findById::Profile::investments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Profiles/:id/investments/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Profile.investments.destroyById() instead.
+        "::destroyById::Profile::investments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Profiles/:id/investments/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Profile.investments.updateById() instead.
+        "::updateById::Profile::investments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Profiles/:id/investments/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Profile.investments() instead.
+        "::get::Profile::investments": {
+          isArray: true,
+          url: urlBase + "/Profiles/:id/investments",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Profile.investments.create() instead.
+        "::create::Profile::investments": {
+          url: urlBase + "/Profiles/:id/investments",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Profile.investments.createMany() instead.
+        "::createMany::Profile::investments": {
+          isArray: true,
+          url: urlBase + "/Profiles/:id/investments",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Profile.investments.destroyAll() instead.
+        "::delete::Profile::investments": {
+          url: urlBase + "/Profiles/:id/investments",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Profile.investments.count() instead.
+        "::count::Profile::investments": {
+          url: urlBase + "/Profiles/:id/investments/count",
+          method: "GET"
         },
       }
     );
