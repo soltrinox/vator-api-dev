@@ -1,0 +1,57 @@
+{
+  "name": "Investment",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "companyname": {
+      "type": "string"
+    },
+    "productId": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "exitdate": {
+      "type": "date"
+    },
+    "roundtotal": {
+      "type": "string"
+    },
+    "valuation": {
+      "type": "string"
+    },
+   "transaction": {
+      "type": "string"
+    },
+   "amount2": {
+      "type": "string"
+    },
+   "aquirer": {
+      "type": "string"
+    },
+   "press": {
+      "type": "string"
+    },
+   "isipo": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "profile": {
+      "type": "belongsTo",
+      "model": "Profile",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

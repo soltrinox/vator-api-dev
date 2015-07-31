@@ -86,6 +86,10 @@
     "dataSource": "MONGOLOCAL",
     "public": true
   },
+  "Investment": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
   "WorkHistory": {
     "dataSource": "MONGOLOCAL",
     "public": true
