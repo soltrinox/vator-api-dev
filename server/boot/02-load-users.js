@@ -23,20 +23,11 @@ module.exports = function(app) {
     var roles = [{
       name: 'admin',
       users: [{
-        firstName: 'Admin',
-        lastName: 'User',
-        email: 'admin@admin.com',
-        username: 'admin',
-        password: 'admin'
-      }]
-    }, {
-      name: 'users',
-      users: [{
-        firstName: 'Guest',
-        lastName: 'User',
-        email: 'user@user.com',
-        username: 'user',
-        password: 'user'
+        firstName: 'Dylan',
+        lastName: 'Rosario',
+        email: 'me@dylanrosario.com',
+        username: 'dylan',
+        password: 'domino'
       }]
     }];
 

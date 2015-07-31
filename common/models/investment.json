@@ -41,7 +41,7 @@
       "type": "string"
     },
    "isipo": {
-      "type": "boolean"
+      "type": "string"
     }
   },
   "validations": [],
