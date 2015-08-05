@@ -16,6 +16,11 @@
       "type": "belongsTo",
       "model": "Category",
       "foreignKey": "categoryId"
+    },
+    "teams": {
+      "type": "hasAndBelongsToMany",
+      "model": "Team",
+      "foreignKey": ""
     }
   },
   "acls": [],

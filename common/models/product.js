@@ -1,6 +1,6 @@
-module.exports = function(Team) {
+module.exports = function(Product) {
 
-
+/*
   Team.getEntireCompany = function(id,cb) {
     var app = Profile.app;
     Team.findById(id,  function(err, team) {
@@ -13,10 +13,10 @@ module.exports = function(Team) {
                 profile.media({ teamId:id },function(err, media){
 
                         // ----- compile object for response  -----
-                        var response = { members : profiles, 
-				company : products,
-            			files: media
-			 };
+                        var response = { members : profiles,
+                                company : products,
+                                files: media
+                         };
 
                           // console.log( response );
                           cb(null, response);
@@ -34,7 +34,7 @@ module.exports = function(Team) {
     returns: {arg: 'company', type: 'object'},
     http: {path:'/entirecompany/:id', verb: 'get'}
   });
-
+*/
 
 
 

@@ -46,6 +46,11 @@
       "type": "hasAndBelongsToMany",
       "model": "Profile",
       "foreignKey": ""
+    },
+    "projects": {
+      "type": "hasAndBelongsToMany",
+      "model": "Product",
+      "foreignKey": ""
     }
   },
   "acls": [],
