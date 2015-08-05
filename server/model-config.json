@@ -121,9 +121,8 @@
   "Media": {
     "dataSource": "MONGOLOCAL",
     "public": true
-  }
-,
-  "container": {
+  },
+  "Container": {
     "dataSource": "s3",
     "public": true
   }

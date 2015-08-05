@@ -17,7 +17,7 @@
    "name": "s3",
    "connector": "loopback-component-storage",
    "provider": "amazon",
-   "key": "DfLeV987I5Mffb61UvQ13ta/69ZRhjXKuPyw0P3C",
-   "keyId": "AKIAIPHQAESNXANRR6C"
+   "key": "i10TjXra7i/Fg0HVfxZbSRBc1rKFUx5Lk7P89f8Y",
+   "keyId": "AKIAJT4IKB4347YLORZQ"
  }
 }

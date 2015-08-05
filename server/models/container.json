@@ -1,6 +1,6 @@
 {
-  "name": "Container",
-  "base": "PersistedModel",
+  "name": "container",
+  "base": "Model",
   "properties": {},
   "validations": [],
   "relations": {},
