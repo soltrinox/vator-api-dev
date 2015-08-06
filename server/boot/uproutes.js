@@ -22,13 +22,9 @@ var router = server.loopback.Router();
 
 server.get('/uploadimage', function(req, res, next) {
   res.setHeader('Content-Type', 'text/html');
-  var form = "<html><body><h1>Storage Service Demo</h1>" +
-    "<a href='/download'>List all containers</a><p>" +
-    "Upload to container con1: <p>" +
-    "<form method='POST' enctype='multipart/form-data' action='/uploadtest/vatorprofilecache'>"
-    + "File to upload: <input type=file name=uploadedFiles multiple=true><br>"
-    + "Notes about the file: <input type=text name=note><br>"
-    + "<input type=submit value=Upload></form>" +
+  var form = "<html><head><META http-equiv='refresh' content='1;URL=http://dev.vator.co'></head>"+
+    "<body><h1>VATOR IMAGE SERVICE</h1>" +
+    "<h3><a href=''>RETURN</a></h3>" +
     "</body></html>";
   res.send(form);
   res.end();
