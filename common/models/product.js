@@ -37,7 +37,7 @@ module.exports = function(Product, Team) {
   // get the whole product team etc
 
 
-  Product.getEntireProduct = function(id, Team, cb) {
+  Product.getEntireProduct = function(id,  cb) {
     var app = Product.app;
     // var tapp = app.models.Team;
     Product.findById(id,  function(err,  product) {
@@ -47,7 +47,7 @@ module.exports = function(Product, Team) {
         console.log(err);
       } else {
         product.teams({ productId:id },function(err, teams){
-          var teamz = [];
+          console.log();
           // for(obj in teams){
           // angular.forEach(teams, function(value, key) {
           //   console.log('TEAM: %j',value);
