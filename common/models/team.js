@@ -15,6 +15,7 @@ module.exports = function(Team) {
 
                 // ----- compile object for response  -----
                 var response = {
+                      details: team,
                       members : profiles,
         				      company : products
                       // files: media
