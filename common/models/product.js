@@ -34,14 +34,14 @@ module.exports = function(Product, Team) {
       }
       tempTags = ctx.instance.tags;
       tempTeam = ctx.instance.team;
-      ctx.instance.unsetAttribute('team');
+      delete ctx.instance.team;
       console.log('BEFORE INSTANCE Tags \n %j', tempTags);
       console.log('BEFORE INSTANCE Team \n %j', tempTeam);
     } else {
       // ctx.data.updated = new Date();
       tempTags = ctx.data.tags;
       tempTeam = ctx.data.team;
-      ctx.instance.unsetAttribute('team');
+      delete ctx.instance.team;
       console.log('BEFORE Tags %j', tempTags);
     }
 
