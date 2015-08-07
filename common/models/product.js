@@ -47,23 +47,17 @@ module.exports = function(Product, Team) {
         console.log(err);
       } else {
         product.teams({ productId:id },function(err, teams){
-          console.log();
-          var teamz = [];
-          // angular.forEach(teams, function(value, key) {
-          //   console.log('TEAM: %j',value);
-          //
-          // });
-          
+
           var teamId = teams[0].id;
           app.models.Team.getPartCompany({ id:teamId },function(err, team){
-              teamz.push(team);
+            var response = {
+                  details: product,
+                  teams : team
+            };
+            cb(null, response);
           });
 
-          var response = {
-                details: product,
-                teams : teamz
-          };
-          cb(null, response);
+
 
         });
       }
