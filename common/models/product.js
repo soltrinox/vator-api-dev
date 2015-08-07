@@ -49,7 +49,7 @@ module.exports = function(Product, Team) {
         product.teams({ productId:id },function(err, xteams){
           console.log('PROD TEAMS %j', xteams[0]);
           var teamId = xteams[0].id;
-          app.models.Team.getPartCompany({ id : teamId },function(err, iteam){
+          app.models.Team.partcompany({ id : teamId },function(err, iteam){
             if(err) {
               console.log(err);
             } else {
