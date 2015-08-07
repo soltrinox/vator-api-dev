@@ -27,7 +27,7 @@ module.exports = function(Product, Team) {
   7] add the team id to the out bound object
   */
 
-  Product.observe('before save', function updateTimestamp(ctx, next) {
+  Product.observe('before save', function (ctx, next) {
     if (ctx.instance) {
       if(!ctx.instance.companyId || 0 === ctx.instance.companyId ){
         isNewCompany = true;
@@ -35,14 +35,20 @@ module.exports = function(Product, Team) {
       tempTags = ctx.instance.tags;
       tempTeam = ctx.instance.team;
       delete ctx.instance.team;
-      console.log('BEFORE INSTANCE Tags \n %j', tempTags);
-      console.log('BEFORE INSTANCE Team \n %j', tempTeam);
+      console.log('BEFORE INSTANCE Tags 1 \n %j', tempTags);
+      console.log('BEFORE INSTANCE Team 1 \n %j', tempTeam);
     } else {
       // ctx.data.updated = new Date();
       tempTags = ctx.data.tags;
-      tempTeam = ctx.data.team;
-      delete ctx.instance.team;
-      console.log('BEFORE Tags %j', tempTags);
+      if(!ctx.data.team || 0 === ctx.data.team.length){
+              console.log('NO Team');
+      }else{
+        console.log('BEFORE Team 2 \n %j', tempTeam);
+        tempTeam = ctx.data.team;
+        delete ctx.instance.team;
+      }
+
+      console.log('BEFORE Tags 2 %j', tempTags);
     }
 
     next();
