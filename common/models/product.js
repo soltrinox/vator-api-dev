@@ -5,6 +5,8 @@ module.exports = function(Product, Team) {
   var tempTeam = {};
   var isNewCompany = false;
 
+  var subTeam = { name: 'xcvxzcvz', id: '3241234124'};
+
   /*  TODO:
   IF NEW COMPANY
   1] copy team members
@@ -45,7 +47,7 @@ module.exports = function(Product, Team) {
       }else{
         console.log('BEFORE Team 2 \n %j', tempTeam);
         tempTeam = ctx.data.team;
-        ctx.data.unsetAttribute('team');
+        ctx.data.team = null ;
       }
 
       console.log('BEFORE Tags 2 %j', tempTags);
@@ -54,9 +56,11 @@ module.exports = function(Product, Team) {
     next();
   });
 
+
+
   Product.observe('after save', function(ctx,  next) {
     if (ctx.instance) {
-      ctx.instance.team = tempTeam;
+      ctx.instance.team = subTeam;
       console.log('Saved Product #%s', ctx.instance.id);
       console.log('AFTER SAVE Tags \n %j', tempTags);
       console.log('AFTER SAVE Team \n %j', tempTeam);
@@ -64,7 +68,7 @@ module.exports = function(Product, Team) {
       console.log('Updated Prodcuts matching %j',
         ctx.where);
         console.log('AFTER UPDATE Tags %j', tempTags);
-        ctx.instance.team = tempTeam;
+        ctx.instance.team = subTeam;
     }
     next();
   });
