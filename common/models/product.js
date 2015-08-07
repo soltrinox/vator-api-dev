@@ -6,10 +6,10 @@ module.exports = function(Product, Team) {
 
   Product.observe('before save', function updateTimestamp(ctx, tempTags,  next) {
     if (ctx.instance) {
-      ctx.instance.updated = new Date();
+      // ctx.instance.updated = new Date();
       tempTags = ctx.instance.tags;
     } else {
-      ctx.data.updated = new Date();
+      // ctx.data.updated = new Date();
       tempTags = ctx.data.tags;
     }
     console.log('BEFORE Tags %j', tempTags);

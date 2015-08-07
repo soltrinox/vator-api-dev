@@ -8,9 +8,6 @@
     },
     "categoryId": {
       "type": "string"
-    },
-    "updated" : {
-      "type" : "date"
     }
   },
   "validations": [],
