@@ -48,8 +48,8 @@ module.exports = function(Product, Team) {
       } else {
         product.teams({ productId:id },function(err, xteams){
           console.log('PROD TEAMS %j', xteams[0]);
-          var teamId = xteams[0].id;
-          app.models.Team.partcompany({ id : teamId },function(err, iteam){
+          var tteamId = xteams[0].id;
+          app.models.Team.getPartCompany({ teamId : tteamId },function(err, iteam){
             if(err) {
               console.log(err);
             } else {
