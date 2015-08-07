@@ -18,7 +18,7 @@ module.exports = function(Team) {
                       details: team,
                       members : profiles,
         				      projects : products,
-                      files: media
+                      media: media
         			  };
                 cb(null, response);
             // });

@@ -1,4 +1,52 @@
-module.exports = function(Product) {
+'use strict';
+module.exports = function(Product, Team) {
+
+  var tempTeam = {};
+
+
+  Product.observe('before save', function updateTimestamp(ctx, next) {
+    if (ctx.instance) {
+      ctx.instance.updated = new Date();
+    } else {
+      ctx.data.updated = new Date();
+    }
+    next();
+  });
+
+  // Product.beforeSave = function(next, modelInstance) {
+  //   console.log('Product.beforeSave: '+ modelInstance );
+  //   if(!modelInstance.Team){
+  //
+  //   }else if(0 === modelInstance.Team){
+  //     delete modelInstance.Team;
+  //   }else{
+  //     tempTeam = modelInstance.Team;
+  //     delete modelInstance.Team;
+  //   }
+  //
+  //   next();
+  // };
+  //
+  // Product.afterCreate = function(next) {
+  //
+  //   next();
+  // }
+  //
+  // Product.beforeCreate = function(next, modelInstance) {
+  //   console.log('Product.beforeCreate: '+modelInstance);
+  //   if(!modelInstance.Team){
+  //
+  //   }else if(0 === modelInstance.Team){
+  //     delete modelInstance.Team;
+  //   }else{
+  //     tempTeam = modelInstance.Team;
+  //     delete modelInstance.Team;
+  //   }
+  //
+  //   next();
+  // };
+
+
 
 /*
   Team.getEntireCompany = function(id,cb) {
