@@ -47,7 +47,7 @@ module.exports = function(Product, Team) {
       }else{
         console.log('BEFORE Team 2 \n %j', tempTeam);
         tempTeam = ctx.data.team;
-        ctx.data.team = null ;
+        delete ctx.data.team;
       }
 
       console.log('BEFORE Tags 2 %j', tempTags);
