@@ -12,13 +12,13 @@ module.exports = function(Team) {
         team.members({ teamId:id },function(err, profiles){
           team.projects({ teamId:id },function(err, products){
                 // Team.media({ teamId:id },function(err, media){
-
+                var media  = { files : [ 'http://bit.ly/1IuNOek', 'http://bit.ly/1M9PmiD' ]};
                 // ----- compile object for response  -----
                 var response = {
                       details: team,
                       members : profiles,
-        				      company : products
-                      // files: media
+        				      projects : products,
+                      files: media
         			  };
                 cb(null, response);
             // });
