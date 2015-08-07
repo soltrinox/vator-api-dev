@@ -46,20 +46,17 @@ module.exports = function(Product, Team) {
       if(err) {
         console.log(err);
       } else {
-        product.teams({ productId:id },function(err, teams){
-          console.log('PROD TEAMS %j', teams);
-          var teamId = teams[0].id;
-          app.models.Team.getPartCompany({ id:teamId },function(err, team){
-            console.log('PART FIRST TEAMS %j', team);
+        product.teams({ productId:id },function(err, xteams){
+          console.log('PROD TEAMS %j', xteams);
+          var teamId = xteams[0].id;
+          app.models.Team.getPartCompany({ id : teamId },function(err, iteam){
+            console.log('PART FIRST TEAMS %j', iteam);
             var response = {
                   details: product,
-                  teams : team
+                  teams : iteam
             };
             cb(null, response);
           });
-
-
-
         });
       }
     });
@@ -71,11 +68,6 @@ module.exports = function(Product, Team) {
     returns: {arg: 'company', type: 'object'},
     http: {path:'/entirecompany/:id', verb: 'get'}
   });
-
-
-
-
-
 
 
 };
