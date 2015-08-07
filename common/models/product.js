@@ -38,8 +38,8 @@ module.exports = function(Product, Team) {
 
 
   Product.getEntireProduct = function(id, Team, cb) {
-    // var app = Product.app;
-    var tapp = Team.app;
+    var app = Product.app;
+    var tapp = app.models.Team;
     Product.findById(id,  function(err, tapp, product) {
       console.log('PRODUCT: %j',product);
       // links the object
