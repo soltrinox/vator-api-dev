@@ -40,6 +40,7 @@ module.exports = function(Product, Team) {
   Product.getEntireProduct = function(id,  cb) {
     var app = Product.app;
     var tapp = app.models.Team;
+      var tteamId = '';
     Product.findById(id,  function(err,  product) {
       console.log('PRODUCT: %j',product);
       // links the object
@@ -48,22 +49,28 @@ module.exports = function(Product, Team) {
       } else {
         product.teams({ productId:id },function(err, xteams){
           console.log('PROD TEAMS %j', xteams[0]);
-          var tteamId = xteams[0].id;
-          app.models.Team.getPartCompany({ teamId : tteamId },function(err, iteam){
-            if(err) {
-              console.log(err);
-            } else {
-              console.log('PART FIRST TEAMS %j', iteam);
-              var response = {
-                    details: product,
-                    teams : iteam
-              };
-              cb(null, response);
-            }
-          });
+          tteamId = xteams[0].id;
+
         });
       }
     });
+
+    app.models.Team.getPartCompany({ id : '55b7b94b7757ec5828256d50' },function(err, iteam){
+      console.log('PART FIRST TEAMS %j', iteam);
+      if(err) {
+        console.log(err);
+      } else {
+        console.log('PART FIRST TEAMS %j', iteam);
+        cb(null, iteam);
+      }
+    });
+
+    // var response = {
+    //       details: product,
+    //       teams : iteam
+    // };
+    // cb(null, response);
+
   };
 
 
