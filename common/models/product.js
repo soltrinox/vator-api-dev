@@ -3,18 +3,44 @@ module.exports = function(Product, Team) {
 
   var tempTags = {};
   var tempTeam = {};
+  var isNewCompnay = false;
 
+  /*  TODO:
+  IF NEW COMPANY
+  1] copy team members
+  2] remove team from object
+  3] save the object
+  4] create team object
+  5] add members
+  6] update product with company ID pointing to team
+  7] add the team id to the out bound object
+  */
+
+  /*  TODO:
+  IF UPDATE COMPANY
+  1] copy team object
+  2] remove team from object
+  3] save the object
+  4] get team object
+  5] update team object
+  6] update product with company ID pointing to team
+  7] add the team id to the out bound object
+  */
 
   Product.observe('before save', function updateTimestamp(ctx, next) {
     if (ctx.instance) {
       if(!ctx.instance.companyId || 0 === ctx.instance.companyId ){
-
+        isNewCompnay = true;
+        tempTeam = ctx.instance.team;
+        ctx.instance.unsetAttribute('team');
       }
       tempTags = ctx.instance.tags;
+      tempTeam = ctx.instance.team;
       console.log('BEFORE INSTANCE Tags %j', tempTags);
     } else {
       // ctx.data.updated = new Date();
       tempTags = ctx.data.tags;
+      tempTeam = ctx.data.team;
       console.log('BEFORE Tags %j', tempTags);
     }
 
