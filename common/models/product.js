@@ -47,15 +47,19 @@ module.exports = function(Product, Team) {
         console.log(err);
       } else {
         product.teams({ productId:id },function(err, xteams){
-          console.log('PROD TEAMS %j', xteams);
+          console.log('PROD TEAMS %j', xteams[0]);
           var teamId = xteams[0].id;
           app.models.Team.getPartCompany({ id : teamId },function(err, iteam){
-            console.log('PART FIRST TEAMS %j', iteam);
-            var response = {
-                  details: product,
-                  teams : iteam
-            };
-            cb(null, response);
+            if(err) {
+              console.log(err);
+            } else {
+              console.log('PART FIRST TEAMS %j', iteam);
+              var response = {
+                    details: product,
+                    teams : iteam
+              };
+              cb(null, response);
+            }
           });
         });
       }
