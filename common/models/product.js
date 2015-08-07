@@ -39,7 +39,7 @@ module.exports = function(Product, Team) {
 
   Product.getEntireProduct = function(id,  cb) {
     var app = Product.app;
-    // var tapp = app.models.Team;
+    var tapp = app.models.Team;
     Product.findById(id,  function(err,  product) {
       console.log('PRODUCT: %j',product);
       // links the object
@@ -48,18 +48,18 @@ module.exports = function(Product, Team) {
       } else {
         product.teams({ productId:id },function(err, teams){
           console.log();
-          // for(obj in teams){
-          // angular.forEach(teams, function(value, key) {
-          //   console.log('TEAM: %j',value);
-          //   var teamId = value.id;
-          //   app.models.Team.getEntireCompany({ id:teamId },function(err, team){
-          //       teamz.push(team);
-          //   });
-          // });
+          var teamz = [];
+          angular.forEach(teams, function(value, key) {
+            console.log('TEAM: %j',value);
+            var teamId = value.id;
+            app.models.Team.getEntireCompany({ id:teamId },function(err, team){
+                teamz.push(team);
+            });
+          });
 
           var response = {
                 details: product,
-                teams : teams
+                teams : teamz
           };
           cb(null, response);
 
