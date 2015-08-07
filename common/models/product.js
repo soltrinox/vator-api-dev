@@ -55,7 +55,7 @@ module.exports = function(Product, Team) {
       }
     });
 
-    app.models.Team.getPartCompany({ teamId : '55b7b94b7757ec5828256d50' },function(err, iteam){
+    app.models.Team.getPartCompany( '55b7b94b7757ec5828256d50' ,function(err, iteam){
       console.log('PART FIRST TEAMS %j', iteam);
       if(err) {
         console.log(err);
