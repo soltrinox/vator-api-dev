@@ -37,8 +37,8 @@ module.exports = function(Product, Team) {
   // get the whole product team etc
 
 
-  Product.getEntireProduct = function(id,cb) {
-    var app = Product.app;
+  Product.getEntireProduct = function(id, Team, cb) {
+    // var app = Product.app;
     var tapp = Team.app;
     Product.findById(id,  function(err, tapp, product) {
       console.log('PRODUCT: %j',product);
