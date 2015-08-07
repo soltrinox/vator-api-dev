@@ -39,20 +39,20 @@ module.exports = function(Product, Team) {
 
   Product.getEntireProduct = function(id, Team, cb) {
     var app = Product.app;
-    var tapp = app.models.Team;
-    Product.findById(id,  function(err, tapp, product) {
+    // var tapp = app.models.Team;
+    Product.findById(id,  function(err,  product) {
       console.log('PRODUCT: %j',product);
       // links the object
       if(err) {
         console.log(err);
       } else {
-        product.teams({ productId:id },function(err, tapp, teams){
+        product.teams({ productId:id },function(err, teams){
           var teamz = [];
           // for(obj in teams){
           angular.forEach(teams, function(value, key) {
             console.log('TEAM: %j',value);
             var teamId = value.id;
-            tapp.getEntireCompany({ id:teamId },function(err, team){
+            app.models.Team.getEntireCompany({ id:teamId },function(err, team){
                 teamz.push(team);
             });
           });
