@@ -20,11 +20,10 @@ module.exports = function(Product, Team) {
 
   Product.observe('after save', function(ctx,  next) {
     if (ctx.instance) {
-      console.log('Saved Product %s#%s', ctx.Model.Product, ctx.instance.id);
+      console.log('Saved Product #%s', ctx.instance.id);
       console.log('AFTER SAVE Tags %j', tempTags);
     } else {
-      console.log('Updated %s matching %j',
-        ctx.Model.Products,
+      console.log('Updated Prodcuts matching %j',
         ctx.where);
         console.log('AFTER UPDATE Tags %j', tempTags);
     }
