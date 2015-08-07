@@ -4,7 +4,7 @@ module.exports = function(Product, Team) {
   var tempTags = {};
 
 
-  Product.observe('before save', function updateTimestamp(ctx, next) {
+  Product.observe('before save', function updateTimestamp(ctx, tempTags,  next) {
     if (ctx.instance) {
       ctx.instance.updated = new Date();
       tempTags = ctx.instance.tags;
@@ -16,7 +16,7 @@ module.exports = function(Product, Team) {
     next();
   });
 
-  Product.observe('after save', function(ctx, next) {
+  Product.observe('after save', function(ctx, tempTags, next) {
     if (ctx.instance) {
       console.log('Saved Product %s#%s', ctx.Model.modelName, ctx.instance.id);
       console.log('AFTER SAVE Tags %j', tempTags);
