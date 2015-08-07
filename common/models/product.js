@@ -69,7 +69,7 @@ module.exports = function(Product, Team) {
   };
 
 
-  Team.remoteMethod('getEntireProduct', {
+  Product.remoteMethod('getEntireProduct', {
     accepts: [{arg: 'id', type: 'string'}],
     returns: {arg: 'company', type: 'object'},
     http: {path:'/entirecompany/:id', verb: 'get'}
