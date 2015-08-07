@@ -49,12 +49,14 @@ module.exports = function(Product, Team) {
         product.teams({ productId:id },function(err, teams){
           console.log();
           var teamz = [];
-          angular.forEach(teams, function(value, key) {
-            console.log('TEAM: %j',value);
-            var teamId = value.id;
-            app.models.Team.getPartCompany({ id:teamId },function(err, team){
-                teamz.push(team);
-            });
+          // angular.forEach(teams, function(value, key) {
+          //   console.log('TEAM: %j',value);
+          //
+          // });
+          
+          var teamId = teams[0].id;
+          app.models.Team.getPartCompany({ id:teamId },function(err, team){
+              teamz.push(team);
           });
 
           var response = {
