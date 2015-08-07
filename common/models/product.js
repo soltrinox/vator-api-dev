@@ -31,16 +31,16 @@ module.exports = function(Product, Team) {
     if (ctx.instance) {
       if(!ctx.instance.companyId || 0 === ctx.instance.companyId ){
         isNewCompnay = true;
-        tempTeam = ctx.instance.team;
-        ctx.instance.unsetAttribute('team');
       }
       tempTags = ctx.instance.tags;
       tempTeam = ctx.instance.team;
+      ctx.instance.unsetAttribute('team');
       console.log('BEFORE INSTANCE Tags %j', tempTags);
     } else {
       // ctx.data.updated = new Date();
       tempTags = ctx.data.tags;
       tempTeam = ctx.data.team;
+      ctx.instance.unsetAttribute('team');
       console.log('BEFORE Tags %j', tempTags);
     }
 
@@ -49,12 +49,14 @@ module.exports = function(Product, Team) {
 
   Product.observe('after save', function(ctx,  next) {
     if (ctx.instance) {
+      ctx.instance.team = tempTeam;
       console.log('Saved Product #%s', ctx.instance.id);
       console.log('AFTER SAVE Tags %j', tempTags);
     } else {
       console.log('Updated Prodcuts matching %j',
         ctx.where);
         console.log('AFTER UPDATE Tags %j', tempTags);
+        ctx.instance.team = tempTeam;
     }
     next();
   });
