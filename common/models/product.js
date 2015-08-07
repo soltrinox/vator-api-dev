@@ -47,9 +47,10 @@ module.exports = function(Product, Team) {
         console.log(err);
       } else {
         product.teams({ productId:id },function(err, teams){
-
+          console.log('PROD TEAMS %j', teams);
           var teamId = teams[0].id;
           app.models.Team.getPartCompany({ id:teamId },function(err, team){
+            console.log('PART FIRST TEAMS %j', team);
             var response = {
                   details: product,
                   teams : team
