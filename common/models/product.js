@@ -56,7 +56,7 @@ module.exports = function(Product, Team) {
               console.log('PART FIRST TEAMS %j', iteam);
               var response = {
                     details: product,
-                    teams : iteam
+                    team : iteam
               };
               cb(null, response);
             }
