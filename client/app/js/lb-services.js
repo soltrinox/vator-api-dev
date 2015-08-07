@@ -7257,6 +7257,40 @@ module.factory(
           method: "POST"
         },
 
+        /**
+         * @ngdoc method
+         * @name lbServices.Product#getEntireProduct
+         * @methodOf lbServices.Product
+         *
+         * @description
+         *
+         * <em>
+         * (The remote method definition does not provide any description.)
+         * </em>
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{string=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `company` – `{object=}` - 
+         */
+        "getEntireProduct": {
+          url: urlBase + "/products/entirecompany/:id",
+          method: "GET"
+        },
+
         // INTERNAL. Use Category.products.findById() instead.
         "::findById::Category::products": {
           params: {
@@ -13710,7 +13744,7 @@ module.factory(
 
         // INTERNAL. Use Education.profile() instead.
         "::get::Education::profile": {
-          url: urlBase + "/Educations/:id/profile",
+          url: urlBase + "/Education/:id/profile",
           method: "GET"
         },
 
@@ -17626,6 +17660,40 @@ module.factory(
          */
         "getEntireCompany": {
           url: urlBase + "/Teams/entirecompany/:id",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Team#getPartCompany
+         * @methodOf lbServices.Team
+         *
+         * @description
+         *
+         * <em>
+         * (The remote method definition does not provide any description.)
+         * </em>
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{string=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `team` – `{object=}` - 
+         */
+        "getPartCompany": {
+          url: urlBase + "/Teams/partcompany/:id",
           method: "GET"
         },
 
@@ -22574,13 +22642,13 @@ module.factory(
   "Education",
   ['LoopBackResource', 'LoopBackAuth', '$injector', function(Resource, LoopBackAuth, $injector) {
     var R = Resource(
-      urlBase + "/Educations/:id",
+      urlBase + "/Education/:id",
       { 'id': '@id' },
       {
 
         // INTERNAL. Use Education.profile() instead.
         "prototype$__get__profile": {
-          url: urlBase + "/Educations/:id/profile",
+          url: urlBase + "/Education/:id/profile",
           method: "GET"
         },
 
@@ -22618,7 +22686,7 @@ module.factory(
          * </em>
          */
         "create": {
-          url: urlBase + "/Educations",
+          url: urlBase + "/Education",
           method: "POST"
         },
 
@@ -22657,7 +22725,7 @@ module.factory(
          */
         "createMany": {
           isArray: true,
-          url: urlBase + "/Educations",
+          url: urlBase + "/Education",
           method: "POST"
         },
 
@@ -22695,7 +22763,7 @@ module.factory(
          * </em>
          */
         "upsert": {
-          url: urlBase + "/Educations",
+          url: urlBase + "/Education",
           method: "PUT"
         },
 
@@ -22727,7 +22795,7 @@ module.factory(
          *  - `exists` – `{boolean=}` - 
          */
         "exists": {
-          url: urlBase + "/Educations/:id/exists",
+          url: urlBase + "/Education/:id/exists",
           method: "GET"
         },
 
@@ -22762,7 +22830,7 @@ module.factory(
          * </em>
          */
         "findById": {
-          url: urlBase + "/Educations/:id",
+          url: urlBase + "/Education/:id",
           method: "GET"
         },
 
@@ -22796,7 +22864,7 @@ module.factory(
          */
         "find": {
           isArray: true,
-          url: urlBase + "/Educations",
+          url: urlBase + "/Education",
           method: "GET"
         },
 
@@ -22829,7 +22897,7 @@ module.factory(
          * </em>
          */
         "findOne": {
-          url: urlBase + "/Educations/findOne",
+          url: urlBase + "/Education/findOne",
           method: "GET"
         },
 
@@ -22863,7 +22931,7 @@ module.factory(
          * This method returns no data.
          */
         "updateAll": {
-          url: urlBase + "/Educations/update",
+          url: urlBase + "/Education/update",
           method: "POST"
         },
 
@@ -22893,7 +22961,7 @@ module.factory(
          * This method returns no data.
          */
         "deleteById": {
-          url: urlBase + "/Educations/:id",
+          url: urlBase + "/Education/:id",
           method: "DELETE"
         },
 
@@ -22925,7 +22993,7 @@ module.factory(
          *  - `count` – `{number=}` - 
          */
         "count": {
-          url: urlBase + "/Educations/count",
+          url: urlBase + "/Education/count",
           method: "GET"
         },
 
@@ -22962,7 +23030,7 @@ module.factory(
          * </em>
          */
         "prototype$updateAttributes": {
-          url: urlBase + "/Educations/:id",
+          url: urlBase + "/Education/:id",
           method: "PUT"
         },
 
@@ -22999,7 +23067,7 @@ module.factory(
          *  - `changes` – `{ReadableStream=}` - 
          */
         "createChangeStream": {
-          url: urlBase + "/Educations/change-stream",
+          url: urlBase + "/Education/change-stream",
           method: "POST"
         },
 
