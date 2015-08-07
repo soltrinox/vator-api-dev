@@ -3,7 +3,7 @@ module.exports = function(Product, Team) {
 
   var tempTags = {};
   var tempTeam = {};
-  var isNewCompnay = false;
+  var isNewCompany = false;
 
   /*  TODO:
   IF NEW COMPANY
@@ -30,12 +30,13 @@ module.exports = function(Product, Team) {
   Product.observe('before save', function updateTimestamp(ctx, next) {
     if (ctx.instance) {
       if(!ctx.instance.companyId || 0 === ctx.instance.companyId ){
-        isNewCompnay = true;
+        isNewCompany = true;
       }
       tempTags = ctx.instance.tags;
       tempTeam = ctx.instance.team;
       ctx.instance.unsetAttribute('team');
-      console.log('BEFORE INSTANCE Tags %j', tempTags);
+      console.log('BEFORE INSTANCE Tags \n %j', tempTags);
+      console.log('BEFORE INSTANCE Team \n %j', tempTeam);
     } else {
       // ctx.data.updated = new Date();
       tempTags = ctx.data.tags;
@@ -51,7 +52,8 @@ module.exports = function(Product, Team) {
     if (ctx.instance) {
       ctx.instance.team = tempTeam;
       console.log('Saved Product #%s', ctx.instance.id);
-      console.log('AFTER SAVE Tags %j', tempTags);
+      console.log('AFTER SAVE Tags \n %j', tempTags);
+      console.log('AFTER SAVE Team \n %j', tempTeam);
     } else {
       console.log('Updated Prodcuts matching %j',
         ctx.where);
