@@ -49,17 +49,17 @@ module.exports = function(Product, Team) {
         product.teams({ productId:id },function(err, teams){
           var teamz = [];
           // for(obj in teams){
-          angular.forEach(teams, function(value, key) {
-            console.log('TEAM: %j',value);
-            var teamId = value.id;
-            app.models.Team.getEntireCompany({ id:teamId },function(err, team){
-                teamz.push(team);
-            });
-          });
+          // angular.forEach(teams, function(value, key) {
+          //   console.log('TEAM: %j',value);
+          //   var teamId = value.id;
+          //   app.models.Team.getEntireCompany({ id:teamId },function(err, team){
+          //       teamz.push(team);
+          //   });
+          // });
 
           var response = {
                 details: product,
-                teams : teamz
+                teams : teams
           };
           cb(null, response);
 
