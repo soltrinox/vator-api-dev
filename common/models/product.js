@@ -45,7 +45,7 @@ module.exports = function(Product, Team) {
       }else{
         console.log('BEFORE Team 2 \n %j', tempTeam);
         tempTeam = ctx.data.team;
-        delete ctx.instance.team;
+        ctx.data.unsetAttribute('team');
       }
 
       console.log('BEFORE Tags 2 %j', tempTags);
