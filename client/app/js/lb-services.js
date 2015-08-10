@@ -13734,7 +13734,7 @@ module.factory(
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/keys/:id/profiles/:fk",
+          url: urlBase + "/Keys/:id/profiles/:fk",
           method: "GET"
         },
 
@@ -13743,7 +13743,7 @@ module.factory(
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/keys/:id/profiles/:fk",
+          url: urlBase + "/Keys/:id/profiles/:fk",
           method: "DELETE"
         },
 
@@ -13752,7 +13752,7 @@ module.factory(
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/keys/:id/profiles/:fk",
+          url: urlBase + "/Keys/:id/profiles/:fk",
           method: "PUT"
         },
 
@@ -13761,7 +13761,7 @@ module.factory(
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/keys/:id/profiles/rel/:fk",
+          url: urlBase + "/Keys/:id/profiles/rel/:fk",
           method: "PUT"
         },
 
@@ -13770,7 +13770,7 @@ module.factory(
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/keys/:id/profiles/rel/:fk",
+          url: urlBase + "/Keys/:id/profiles/rel/:fk",
           method: "DELETE"
         },
 
@@ -13779,39 +13779,39 @@ module.factory(
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/keys/:id/profiles/rel/:fk",
+          url: urlBase + "/Keys/:id/profiles/rel/:fk",
           method: "HEAD"
         },
 
         // INTERNAL. Use Keys.profiles() instead.
         "::get::keys::profiles": {
           isArray: true,
-          url: urlBase + "/keys/:id/profiles",
+          url: urlBase + "/Keys/:id/profiles",
           method: "GET"
         },
 
         // INTERNAL. Use Keys.profiles.create() instead.
         "::create::keys::profiles": {
-          url: urlBase + "/keys/:id/profiles",
+          url: urlBase + "/Keys/:id/profiles",
           method: "POST"
         },
 
         // INTERNAL. Use Keys.profiles.createMany() instead.
         "::createMany::keys::profiles": {
           isArray: true,
-          url: urlBase + "/keys/:id/profiles",
+          url: urlBase + "/Keys/:id/profiles",
           method: "POST"
         },
 
         // INTERNAL. Use Keys.profiles.destroyAll() instead.
         "::delete::keys::profiles": {
-          url: urlBase + "/keys/:id/profiles",
+          url: urlBase + "/Keys/:id/profiles",
           method: "DELETE"
         },
 
         // INTERNAL. Use Keys.profiles.count() instead.
         "::count::keys::profiles": {
-          url: urlBase + "/keys/:id/profiles/count",
+          url: urlBase + "/Keys/:id/profiles/count",
           method: "GET"
         },
 
@@ -21367,7 +21367,7 @@ module.factory(
   "Keys",
   ['LoopBackResource', 'LoopBackAuth', '$injector', function(Resource, LoopBackAuth, $injector) {
     var R = Resource(
-      urlBase + "/keys/:id",
+      urlBase + "/Keys/:id",
       { 'id': '@id' },
       {
 
@@ -21376,7 +21376,7 @@ module.factory(
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/keys/:id/profiles/:fk",
+          url: urlBase + "/Keys/:id/profiles/:fk",
           method: "GET"
         },
 
@@ -21385,7 +21385,7 @@ module.factory(
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/keys/:id/profiles/:fk",
+          url: urlBase + "/Keys/:id/profiles/:fk",
           method: "DELETE"
         },
 
@@ -21394,7 +21394,7 @@ module.factory(
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/keys/:id/profiles/:fk",
+          url: urlBase + "/Keys/:id/profiles/:fk",
           method: "PUT"
         },
 
@@ -21403,7 +21403,7 @@ module.factory(
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/keys/:id/profiles/rel/:fk",
+          url: urlBase + "/Keys/:id/profiles/rel/:fk",
           method: "PUT"
         },
 
@@ -21412,7 +21412,7 @@ module.factory(
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/keys/:id/profiles/rel/:fk",
+          url: urlBase + "/Keys/:id/profiles/rel/:fk",
           method: "DELETE"
         },
 
@@ -21421,32 +21421,32 @@ module.factory(
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/keys/:id/profiles/rel/:fk",
+          url: urlBase + "/Keys/:id/profiles/rel/:fk",
           method: "HEAD"
         },
 
         // INTERNAL. Use Keys.profiles() instead.
         "prototype$__get__profiles": {
           isArray: true,
-          url: urlBase + "/keys/:id/profiles",
+          url: urlBase + "/Keys/:id/profiles",
           method: "GET"
         },
 
         // INTERNAL. Use Keys.profiles.create() instead.
         "prototype$__create__profiles": {
-          url: urlBase + "/keys/:id/profiles",
+          url: urlBase + "/Keys/:id/profiles",
           method: "POST"
         },
 
         // INTERNAL. Use Keys.profiles.destroyAll() instead.
         "prototype$__delete__profiles": {
-          url: urlBase + "/keys/:id/profiles",
+          url: urlBase + "/Keys/:id/profiles",
           method: "DELETE"
         },
 
         // INTERNAL. Use Keys.profiles.count() instead.
         "prototype$__count__profiles": {
-          url: urlBase + "/keys/:id/profiles/count",
+          url: urlBase + "/Keys/:id/profiles/count",
           method: "GET"
         },
 
@@ -21484,7 +21484,7 @@ module.factory(
          * </em>
          */
         "create": {
-          url: urlBase + "/keys",
+          url: urlBase + "/Keys",
           method: "POST"
         },
 
@@ -21523,7 +21523,7 @@ module.factory(
          */
         "createMany": {
           isArray: true,
-          url: urlBase + "/keys",
+          url: urlBase + "/Keys",
           method: "POST"
         },
 
@@ -21561,7 +21561,7 @@ module.factory(
          * </em>
          */
         "upsert": {
-          url: urlBase + "/keys",
+          url: urlBase + "/Keys",
           method: "PUT"
         },
 
@@ -21593,7 +21593,7 @@ module.factory(
          *  - `exists` – `{boolean=}` - 
          */
         "exists": {
-          url: urlBase + "/keys/:id/exists",
+          url: urlBase + "/Keys/:id/exists",
           method: "GET"
         },
 
@@ -21628,7 +21628,7 @@ module.factory(
          * </em>
          */
         "findById": {
-          url: urlBase + "/keys/:id",
+          url: urlBase + "/Keys/:id",
           method: "GET"
         },
 
@@ -21662,7 +21662,7 @@ module.factory(
          */
         "find": {
           isArray: true,
-          url: urlBase + "/keys",
+          url: urlBase + "/Keys",
           method: "GET"
         },
 
@@ -21695,7 +21695,7 @@ module.factory(
          * </em>
          */
         "findOne": {
-          url: urlBase + "/keys/findOne",
+          url: urlBase + "/Keys/findOne",
           method: "GET"
         },
 
@@ -21729,7 +21729,7 @@ module.factory(
          * This method returns no data.
          */
         "updateAll": {
-          url: urlBase + "/keys/update",
+          url: urlBase + "/Keys/update",
           method: "POST"
         },
 
@@ -21759,7 +21759,7 @@ module.factory(
          * This method returns no data.
          */
         "deleteById": {
-          url: urlBase + "/keys/:id",
+          url: urlBase + "/Keys/:id",
           method: "DELETE"
         },
 
@@ -21791,7 +21791,7 @@ module.factory(
          *  - `count` – `{number=}` - 
          */
         "count": {
-          url: urlBase + "/keys/count",
+          url: urlBase + "/Keys/count",
           method: "GET"
         },
 
@@ -21828,7 +21828,7 @@ module.factory(
          * </em>
          */
         "prototype$updateAttributes": {
-          url: urlBase + "/keys/:id",
+          url: urlBase + "/Keys/:id",
           method: "PUT"
         },
 
@@ -21865,7 +21865,7 @@ module.factory(
          *  - `changes` – `{ReadableStream=}` - 
          */
         "createChangeStream": {
-          url: urlBase + "/keys/change-stream",
+          url: urlBase + "/Keys/change-stream",
           method: "POST"
         },
 
@@ -26391,9 +26391,9 @@ module.factory(
           method: "PUT"
         },
 
-        // INTERNAL. Use Program.teams() instead.
-        "prototype$__get__teams": {
-          url: urlBase + "/Programs/:id/teams",
+        // INTERNAL. Use Program.admins() instead.
+        "prototype$__get__admins": {
+          url: urlBase + "/Programs/:id/admins",
           method: "GET"
         },
 
@@ -26874,6 +26874,33 @@ module.factory(
           method: "PUT"
         },
 
+        // INTERNAL. Use Group.programs.link() instead.
+        "::link::Group::programs": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/programs/rel/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Group.programs.unlink() instead.
+        "::unlink::Group::programs": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/programs/rel/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Group.programs.exists() instead.
+        "::exists::Group::programs": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/programs/rel/:fk",
+          method: "HEAD"
+        },
+
         // INTERNAL. Use Group.programs() instead.
         "::get::Group::programs": {
           isArray: true,
@@ -27345,12 +27372,12 @@ module.factory(
 
         /**
          * @ngdoc method
-         * @name lbServices.Program#teams
+         * @name lbServices.Program#admins
          * @methodOf lbServices.Program
          *
          * @description
          *
-         * Fetches belongsTo relation teams.
+         * Fetches belongsTo relation admins.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -27373,9 +27400,9 @@ module.factory(
          * This usually means the response is a `Group` object.)
          * </em>
          */
-        R.teams = function() {
+        R.admins = function() {
           var TargetResource = $injector.get("Group");
-          var action = TargetResource["::get::Program::teams"];
+          var action = TargetResource["::get::Program::admins"];
           return action.apply(R, arguments);
         };
 
@@ -27461,57 +27488,57 @@ module.factory(
           method: "HEAD"
         },
 
-        // INTERNAL. Use Application.round.findById() instead.
-        "prototype$__findById__round": {
+        // INTERNAL. Use Application.rounds.findById() instead.
+        "prototype$__findById__rounds": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Applications/:id/round/:fk",
+          url: urlBase + "/Applications/:id/rounds/:fk",
           method: "GET"
         },
 
-        // INTERNAL. Use Application.round.destroyById() instead.
-        "prototype$__destroyById__round": {
+        // INTERNAL. Use Application.rounds.destroyById() instead.
+        "prototype$__destroyById__rounds": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Applications/:id/round/:fk",
+          url: urlBase + "/Applications/:id/rounds/:fk",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Application.round.updateById() instead.
-        "prototype$__updateById__round": {
+        // INTERNAL. Use Application.rounds.updateById() instead.
+        "prototype$__updateById__rounds": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Applications/:id/round/:fk",
+          url: urlBase + "/Applications/:id/rounds/:fk",
           method: "PUT"
         },
 
-        // INTERNAL. Use Application.round.link() instead.
-        "prototype$__link__round": {
+        // INTERNAL. Use Application.rounds.link() instead.
+        "prototype$__link__rounds": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Applications/:id/round/rel/:fk",
+          url: urlBase + "/Applications/:id/rounds/rel/:fk",
           method: "PUT"
         },
 
-        // INTERNAL. Use Application.round.unlink() instead.
-        "prototype$__unlink__round": {
+        // INTERNAL. Use Application.rounds.unlink() instead.
+        "prototype$__unlink__rounds": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Applications/:id/round/rel/:fk",
+          url: urlBase + "/Applications/:id/rounds/rel/:fk",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Application.round.exists() instead.
-        "prototype$__exists__round": {
+        // INTERNAL. Use Application.rounds.exists() instead.
+        "prototype$__exists__rounds": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Applications/:id/round/rel/:fk",
+          url: urlBase + "/Applications/:id/rounds/rel/:fk",
           method: "HEAD"
         },
 
@@ -27540,28 +27567,28 @@ module.factory(
           method: "GET"
         },
 
-        // INTERNAL. Use Application.round() instead.
-        "prototype$__get__round": {
+        // INTERNAL. Use Application.rounds() instead.
+        "prototype$__get__rounds": {
           isArray: true,
-          url: urlBase + "/Applications/:id/round",
+          url: urlBase + "/Applications/:id/rounds",
           method: "GET"
         },
 
-        // INTERNAL. Use Application.round.create() instead.
-        "prototype$__create__round": {
-          url: urlBase + "/Applications/:id/round",
+        // INTERNAL. Use Application.rounds.create() instead.
+        "prototype$__create__rounds": {
+          url: urlBase + "/Applications/:id/rounds",
           method: "POST"
         },
 
-        // INTERNAL. Use Application.round.destroyAll() instead.
-        "prototype$__delete__round": {
-          url: urlBase + "/Applications/:id/round",
+        // INTERNAL. Use Application.rounds.destroyAll() instead.
+        "prototype$__delete__rounds": {
+          url: urlBase + "/Applications/:id/rounds",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Application.round.count() instead.
-        "prototype$__count__round": {
-          url: urlBase + "/Applications/:id/round/count",
+        // INTERNAL. Use Application.rounds.count() instead.
+        "prototype$__count__rounds": {
+          url: urlBase + "/Applications/:id/rounds/count",
           method: "GET"
         },
 
@@ -28703,27 +28730,27 @@ module.factory(
         };
     /**
      * @ngdoc object
-     * @name lbServices.Application.round
-     * @header lbServices.Application.round
+     * @name lbServices.Application.rounds
+     * @header lbServices.Application.rounds
      * @object
      * @description
      *
-     * The object `Application.round` groups methods
+     * The object `Application.rounds` groups methods
      * manipulating `Round` instances related to `Application`.
      *
-     * Call {@link lbServices.Application#round Application.round()}
+     * Call {@link lbServices.Application#rounds Application.rounds()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbServices.Application#round
+         * @name lbServices.Application#rounds
          * @methodOf lbServices.Application
          *
          * @description
          *
-         * Queries round of Application.
+         * Queries rounds of Application.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -28746,20 +28773,20 @@ module.factory(
          * This usually means the response is a `Round` object.)
          * </em>
          */
-        R.round = function() {
+        R.rounds = function() {
           var TargetResource = $injector.get("Round");
-          var action = TargetResource["::get::Application::round"];
+          var action = TargetResource["::get::Application::rounds"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Application.round#count
-         * @methodOf lbServices.Application.round
+         * @name lbServices.Application.rounds#count
+         * @methodOf lbServices.Application.rounds
          *
          * @description
          *
-         * Counts round of Application.
+         * Counts rounds of Application.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -28781,20 +28808,20 @@ module.factory(
          *
          *  - `count` – `{number=}` - 
          */
-        R.round.count = function() {
+        R.rounds.count = function() {
           var TargetResource = $injector.get("Round");
-          var action = TargetResource["::count::Application::round"];
+          var action = TargetResource["::count::Application::rounds"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Application.round#create
-         * @methodOf lbServices.Application.round
+         * @name lbServices.Application.rounds#create
+         * @methodOf lbServices.Application.rounds
          *
          * @description
          *
-         * Creates a new instance in round of this model.
+         * Creates a new instance in rounds of this model.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -28819,20 +28846,20 @@ module.factory(
          * This usually means the response is a `Round` object.)
          * </em>
          */
-        R.round.create = function() {
+        R.rounds.create = function() {
           var TargetResource = $injector.get("Round");
-          var action = TargetResource["::create::Application::round"];
+          var action = TargetResource["::create::Application::rounds"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Application.round#createMany
-         * @methodOf lbServices.Application.round
+         * @name lbServices.Application.rounds#createMany
+         * @methodOf lbServices.Application.rounds
          *
          * @description
          *
-         * Creates a new instance in round of this model.
+         * Creates a new instance in rounds of this model.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -28857,20 +28884,20 @@ module.factory(
          * This usually means the response is a `Round` object.)
          * </em>
          */
-        R.round.createMany = function() {
+        R.rounds.createMany = function() {
           var TargetResource = $injector.get("Round");
-          var action = TargetResource["::createMany::Application::round"];
+          var action = TargetResource["::createMany::Application::rounds"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Application.round#destroyAll
-         * @methodOf lbServices.Application.round
+         * @name lbServices.Application.rounds#destroyAll
+         * @methodOf lbServices.Application.rounds
          *
          * @description
          *
-         * Deletes all round of this model.
+         * Deletes all rounds of this model.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -28888,26 +28915,26 @@ module.factory(
          *
          * This method returns no data.
          */
-        R.round.destroyAll = function() {
+        R.rounds.destroyAll = function() {
           var TargetResource = $injector.get("Round");
-          var action = TargetResource["::delete::Application::round"];
+          var action = TargetResource["::delete::Application::rounds"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Application.round#destroyById
-         * @methodOf lbServices.Application.round
+         * @name lbServices.Application.rounds#destroyById
+         * @methodOf lbServices.Application.rounds
          *
          * @description
          *
-         * Delete a related item by id for round.
+         * Delete a related item by id for rounds.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - PersistedModel id
          *
-         *  - `fk` – `{*}` - Foreign key for round
+         *  - `fk` – `{*}` - Foreign key for rounds
          *
          * @param {function(Object,Object)=} successCb
          *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -28921,26 +28948,26 @@ module.factory(
          *
          * This method returns no data.
          */
-        R.round.destroyById = function() {
+        R.rounds.destroyById = function() {
           var TargetResource = $injector.get("Round");
-          var action = TargetResource["::destroyById::Application::round"];
+          var action = TargetResource["::destroyById::Application::rounds"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Application.round#exists
-         * @methodOf lbServices.Application.round
+         * @name lbServices.Application.rounds#exists
+         * @methodOf lbServices.Application.rounds
          *
          * @description
          *
-         * Check the existence of round relation to an item by id.
+         * Check the existence of rounds relation to an item by id.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - PersistedModel id
          *
-         *  - `fk` – `{*}` - Foreign key for round
+         *  - `fk` – `{*}` - Foreign key for rounds
          *
          * @param {function(Object,Object)=} successCb
          *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -28957,26 +28984,26 @@ module.factory(
          * This usually means the response is a `Round` object.)
          * </em>
          */
-        R.round.exists = function() {
+        R.rounds.exists = function() {
           var TargetResource = $injector.get("Round");
-          var action = TargetResource["::exists::Application::round"];
+          var action = TargetResource["::exists::Application::rounds"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Application.round#findById
-         * @methodOf lbServices.Application.round
+         * @name lbServices.Application.rounds#findById
+         * @methodOf lbServices.Application.rounds
          *
          * @description
          *
-         * Find a related item by id for round.
+         * Find a related item by id for rounds.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - PersistedModel id
          *
-         *  - `fk` – `{*}` - Foreign key for round
+         *  - `fk` – `{*}` - Foreign key for rounds
          *
          * @param {function(Object,Object)=} successCb
          *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -28993,26 +29020,26 @@ module.factory(
          * This usually means the response is a `Round` object.)
          * </em>
          */
-        R.round.findById = function() {
+        R.rounds.findById = function() {
           var TargetResource = $injector.get("Round");
-          var action = TargetResource["::findById::Application::round"];
+          var action = TargetResource["::findById::Application::rounds"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Application.round#link
-         * @methodOf lbServices.Application.round
+         * @name lbServices.Application.rounds#link
+         * @methodOf lbServices.Application.rounds
          *
          * @description
          *
-         * Add a related item by id for round.
+         * Add a related item by id for rounds.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - PersistedModel id
          *
-         *  - `fk` – `{*}` - Foreign key for round
+         *  - `fk` – `{*}` - Foreign key for rounds
          *
          * @param {Object} postData Request data.
          *
@@ -29033,26 +29060,26 @@ module.factory(
          * This usually means the response is a `Round` object.)
          * </em>
          */
-        R.round.link = function() {
+        R.rounds.link = function() {
           var TargetResource = $injector.get("Round");
-          var action = TargetResource["::link::Application::round"];
+          var action = TargetResource["::link::Application::rounds"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Application.round#unlink
-         * @methodOf lbServices.Application.round
+         * @name lbServices.Application.rounds#unlink
+         * @methodOf lbServices.Application.rounds
          *
          * @description
          *
-         * Remove the round relation to an item by id.
+         * Remove the rounds relation to an item by id.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - PersistedModel id
          *
-         *  - `fk` – `{*}` - Foreign key for round
+         *  - `fk` – `{*}` - Foreign key for rounds
          *
          * @param {function(Object,Object)=} successCb
          *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -29066,26 +29093,26 @@ module.factory(
          *
          * This method returns no data.
          */
-        R.round.unlink = function() {
+        R.rounds.unlink = function() {
           var TargetResource = $injector.get("Round");
-          var action = TargetResource["::unlink::Application::round"];
+          var action = TargetResource["::unlink::Application::rounds"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Application.round#updateById
-         * @methodOf lbServices.Application.round
+         * @name lbServices.Application.rounds#updateById
+         * @methodOf lbServices.Application.rounds
          *
          * @description
          *
-         * Update a related item by id for round.
+         * Update a related item by id for rounds.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - PersistedModel id
          *
-         *  - `fk` – `{*}` - Foreign key for round
+         *  - `fk` – `{*}` - Foreign key for rounds
          *
          * @param {Object} postData Request data.
          *
@@ -29106,9 +29133,9 @@ module.factory(
          * This usually means the response is a `Round` object.)
          * </em>
          */
-        R.round.updateById = function() {
+        R.rounds.updateById = function() {
           var TargetResource = $injector.get("Round");
-          var action = TargetResource["::updateById::Application::round"];
+          var action = TargetResource["::updateById::Application::rounds"];
           return action.apply(R, arguments);
         };
 
@@ -29200,6 +29227,114 @@ module.factory(
           method: "HEAD"
         },
 
+        // INTERNAL. Use Round.admins.findById() instead.
+        "prototype$__findById__admins": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/admins/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Round.admins.destroyById() instead.
+        "prototype$__destroyById__admins": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/admins/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Round.admins.updateById() instead.
+        "prototype$__updateById__admins": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/admins/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Round.admins.link() instead.
+        "prototype$__link__admins": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/admins/rel/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Round.admins.unlink() instead.
+        "prototype$__unlink__admins": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/admins/rel/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Round.admins.exists() instead.
+        "prototype$__exists__admins": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/admins/rel/:fk",
+          method: "HEAD"
+        },
+
+        // INTERNAL. Use Round.judges.findById() instead.
+        "prototype$__findById__judges": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/judges/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Round.judges.destroyById() instead.
+        "prototype$__destroyById__judges": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/judges/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Round.judges.updateById() instead.
+        "prototype$__updateById__judges": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/judges/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Round.judges.link() instead.
+        "prototype$__link__judges": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/judges/rel/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Round.judges.unlink() instead.
+        "prototype$__unlink__judges": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/judges/rel/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Round.judges.exists() instead.
+        "prototype$__exists__judges": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/judges/rel/:fk",
+          method: "HEAD"
+        },
+
         // INTERNAL. Use Round.applications() instead.
         "prototype$__get__applications": {
           isArray: true,
@@ -29222,6 +29357,56 @@ module.factory(
         // INTERNAL. Use Round.applications.count() instead.
         "prototype$__count__applications": {
           url: urlBase + "/Rounds/:id/applications/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Round.admins() instead.
+        "prototype$__get__admins": {
+          isArray: true,
+          url: urlBase + "/Rounds/:id/admins",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Round.admins.create() instead.
+        "prototype$__create__admins": {
+          url: urlBase + "/Rounds/:id/admins",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Round.admins.destroyAll() instead.
+        "prototype$__delete__admins": {
+          url: urlBase + "/Rounds/:id/admins",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Round.admins.count() instead.
+        "prototype$__count__admins": {
+          url: urlBase + "/Rounds/:id/admins/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Round.judges() instead.
+        "prototype$__get__judges": {
+          isArray: true,
+          url: urlBase + "/Rounds/:id/judges",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Round.judges.create() instead.
+        "prototype$__create__judges": {
+          url: urlBase + "/Rounds/:id/judges",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Round.judges.destroyAll() instead.
+        "prototype$__delete__judges": {
+          url: urlBase + "/Rounds/:id/judges",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Round.judges.count() instead.
+        "prototype$__count__judges": {
+          url: urlBase + "/Rounds/:id/judges/count",
           method: "GET"
         },
 
@@ -29703,89 +29888,89 @@ module.factory(
           method: "GET"
         },
 
-        // INTERNAL. Use Application.round.findById() instead.
-        "::findById::Application::round": {
+        // INTERNAL. Use Application.rounds.findById() instead.
+        "::findById::Application::rounds": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Applications/:id/round/:fk",
+          url: urlBase + "/Applications/:id/rounds/:fk",
           method: "GET"
         },
 
-        // INTERNAL. Use Application.round.destroyById() instead.
-        "::destroyById::Application::round": {
+        // INTERNAL. Use Application.rounds.destroyById() instead.
+        "::destroyById::Application::rounds": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Applications/:id/round/:fk",
+          url: urlBase + "/Applications/:id/rounds/:fk",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Application.round.updateById() instead.
-        "::updateById::Application::round": {
+        // INTERNAL. Use Application.rounds.updateById() instead.
+        "::updateById::Application::rounds": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Applications/:id/round/:fk",
+          url: urlBase + "/Applications/:id/rounds/:fk",
           method: "PUT"
         },
 
-        // INTERNAL. Use Application.round.link() instead.
-        "::link::Application::round": {
+        // INTERNAL. Use Application.rounds.link() instead.
+        "::link::Application::rounds": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Applications/:id/round/rel/:fk",
+          url: urlBase + "/Applications/:id/rounds/rel/:fk",
           method: "PUT"
         },
 
-        // INTERNAL. Use Application.round.unlink() instead.
-        "::unlink::Application::round": {
+        // INTERNAL. Use Application.rounds.unlink() instead.
+        "::unlink::Application::rounds": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Applications/:id/round/rel/:fk",
+          url: urlBase + "/Applications/:id/rounds/rel/:fk",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Application.round.exists() instead.
-        "::exists::Application::round": {
+        // INTERNAL. Use Application.rounds.exists() instead.
+        "::exists::Application::rounds": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Applications/:id/round/rel/:fk",
+          url: urlBase + "/Applications/:id/rounds/rel/:fk",
           method: "HEAD"
         },
 
-        // INTERNAL. Use Application.round() instead.
-        "::get::Application::round": {
+        // INTERNAL. Use Application.rounds() instead.
+        "::get::Application::rounds": {
           isArray: true,
-          url: urlBase + "/Applications/:id/round",
+          url: urlBase + "/Applications/:id/rounds",
           method: "GET"
         },
 
-        // INTERNAL. Use Application.round.create() instead.
-        "::create::Application::round": {
-          url: urlBase + "/Applications/:id/round",
+        // INTERNAL. Use Application.rounds.create() instead.
+        "::create::Application::rounds": {
+          url: urlBase + "/Applications/:id/rounds",
           method: "POST"
         },
 
-        // INTERNAL. Use Application.round.createMany() instead.
-        "::createMany::Application::round": {
+        // INTERNAL. Use Application.rounds.createMany() instead.
+        "::createMany::Application::rounds": {
           isArray: true,
-          url: urlBase + "/Applications/:id/round",
+          url: urlBase + "/Applications/:id/rounds",
           method: "POST"
         },
 
-        // INTERNAL. Use Application.round.destroyAll() instead.
-        "::delete::Application::round": {
-          url: urlBase + "/Applications/:id/round",
+        // INTERNAL. Use Application.rounds.destroyAll() instead.
+        "::delete::Application::rounds": {
+          url: urlBase + "/Applications/:id/rounds",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Application.round.count() instead.
-        "::count::Application::round": {
-          url: urlBase + "/Applications/:id/round/count",
+        // INTERNAL. Use Application.rounds.count() instead.
+        "::count::Application::rounds": {
+          url: urlBase + "/Applications/:id/rounds/count",
           method: "GET"
         },
       }
@@ -30370,6 +30555,826 @@ module.factory(
           var action = TargetResource["::updateById::Round::applications"];
           return action.apply(R, arguments);
         };
+    /**
+     * @ngdoc object
+     * @name lbServices.Round.admins
+     * @header lbServices.Round.admins
+     * @object
+     * @description
+     *
+     * The object `Round.admins` groups methods
+     * manipulating `Group` instances related to `Round`.
+     *
+     * Call {@link lbServices.Round#admins Round.admins()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round#admins
+         * @methodOf lbServices.Round
+         *
+         * @description
+         *
+         * Queries admins of Round.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.admins = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::get::Round::admins"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.admins#count
+         * @methodOf lbServices.Round.admins
+         *
+         * @description
+         *
+         * Counts admins of Round.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        R.admins.count = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::count::Round::admins"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.admins#create
+         * @methodOf lbServices.Round.admins
+         *
+         * @description
+         *
+         * Creates a new instance in admins of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.admins.create = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::create::Round::admins"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.admins#createMany
+         * @methodOf lbServices.Round.admins
+         *
+         * @description
+         *
+         * Creates a new instance in admins of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.admins.createMany = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::createMany::Round::admins"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.admins#destroyAll
+         * @methodOf lbServices.Round.admins
+         *
+         * @description
+         *
+         * Deletes all admins of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.admins.destroyAll = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::delete::Round::admins"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.admins#destroyById
+         * @methodOf lbServices.Round.admins
+         *
+         * @description
+         *
+         * Delete a related item by id for admins.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for admins
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.admins.destroyById = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::destroyById::Round::admins"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.admins#exists
+         * @methodOf lbServices.Round.admins
+         *
+         * @description
+         *
+         * Check the existence of admins relation to an item by id.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for admins
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.admins.exists = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::exists::Round::admins"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.admins#findById
+         * @methodOf lbServices.Round.admins
+         *
+         * @description
+         *
+         * Find a related item by id for admins.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for admins
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.admins.findById = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::findById::Round::admins"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.admins#link
+         * @methodOf lbServices.Round.admins
+         *
+         * @description
+         *
+         * Add a related item by id for admins.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for admins
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.admins.link = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::link::Round::admins"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.admins#unlink
+         * @methodOf lbServices.Round.admins
+         *
+         * @description
+         *
+         * Remove the admins relation to an item by id.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for admins
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.admins.unlink = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::unlink::Round::admins"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.admins#updateById
+         * @methodOf lbServices.Round.admins
+         *
+         * @description
+         *
+         * Update a related item by id for admins.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for admins
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.admins.updateById = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::updateById::Round::admins"];
+          return action.apply(R, arguments);
+        };
+    /**
+     * @ngdoc object
+     * @name lbServices.Round.judges
+     * @header lbServices.Round.judges
+     * @object
+     * @description
+     *
+     * The object `Round.judges` groups methods
+     * manipulating `Group` instances related to `Round`.
+     *
+     * Call {@link lbServices.Round#judges Round.judges()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round#judges
+         * @methodOf lbServices.Round
+         *
+         * @description
+         *
+         * Queries judges of Round.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.judges = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::get::Round::judges"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.judges#count
+         * @methodOf lbServices.Round.judges
+         *
+         * @description
+         *
+         * Counts judges of Round.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        R.judges.count = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::count::Round::judges"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.judges#create
+         * @methodOf lbServices.Round.judges
+         *
+         * @description
+         *
+         * Creates a new instance in judges of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.judges.create = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::create::Round::judges"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.judges#createMany
+         * @methodOf lbServices.Round.judges
+         *
+         * @description
+         *
+         * Creates a new instance in judges of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.judges.createMany = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::createMany::Round::judges"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.judges#destroyAll
+         * @methodOf lbServices.Round.judges
+         *
+         * @description
+         *
+         * Deletes all judges of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.judges.destroyAll = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::delete::Round::judges"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.judges#destroyById
+         * @methodOf lbServices.Round.judges
+         *
+         * @description
+         *
+         * Delete a related item by id for judges.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for judges
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.judges.destroyById = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::destroyById::Round::judges"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.judges#exists
+         * @methodOf lbServices.Round.judges
+         *
+         * @description
+         *
+         * Check the existence of judges relation to an item by id.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for judges
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.judges.exists = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::exists::Round::judges"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.judges#findById
+         * @methodOf lbServices.Round.judges
+         *
+         * @description
+         *
+         * Find a related item by id for judges.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for judges
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.judges.findById = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::findById::Round::judges"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.judges#link
+         * @methodOf lbServices.Round.judges
+         *
+         * @description
+         *
+         * Add a related item by id for judges.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for judges
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.judges.link = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::link::Round::judges"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.judges#unlink
+         * @methodOf lbServices.Round.judges
+         *
+         * @description
+         *
+         * Remove the judges relation to an item by id.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for judges
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.judges.unlink = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::unlink::Round::judges"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Round.judges#updateById
+         * @methodOf lbServices.Round.judges
+         *
+         * @description
+         *
+         * Update a related item by id for judges.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for judges
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Group` object.)
+         * </em>
+         */
+        R.judges.updateById = function() {
+          var TargetResource = $injector.get("Group");
+          var action = TargetResource["::updateById::Round::judges"];
+          return action.apply(R, arguments);
+        };
 
     return R;
   }]);
@@ -30478,6 +31483,33 @@ module.factory(
           },
           url: urlBase + "/Groups/:id/programs/:fk",
           method: "PUT"
+        },
+
+        // INTERNAL. Use Group.programs.link() instead.
+        "prototype$__link__programs": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/programs/rel/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Group.programs.unlink() instead.
+        "prototype$__unlink__programs": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/programs/rel/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Group.programs.exists() instead.
+        "prototype$__exists__programs": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Groups/:id/programs/rel/:fk",
+          method: "HEAD"
         },
 
         // INTERNAL. Use Group.members() instead.
@@ -31035,9 +32067,181 @@ module.factory(
           method: "GET"
         },
 
-        // INTERNAL. Use Program.teams() instead.
-        "::get::Program::teams": {
-          url: urlBase + "/Programs/:id/teams",
+        // INTERNAL. Use Program.admins() instead.
+        "::get::Program::admins": {
+          url: urlBase + "/Programs/:id/admins",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Round.admins.findById() instead.
+        "::findById::Round::admins": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/admins/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Round.admins.destroyById() instead.
+        "::destroyById::Round::admins": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/admins/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Round.admins.updateById() instead.
+        "::updateById::Round::admins": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/admins/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Round.admins.link() instead.
+        "::link::Round::admins": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/admins/rel/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Round.admins.unlink() instead.
+        "::unlink::Round::admins": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/admins/rel/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Round.admins.exists() instead.
+        "::exists::Round::admins": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/admins/rel/:fk",
+          method: "HEAD"
+        },
+
+        // INTERNAL. Use Round.judges.findById() instead.
+        "::findById::Round::judges": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/judges/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Round.judges.destroyById() instead.
+        "::destroyById::Round::judges": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/judges/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Round.judges.updateById() instead.
+        "::updateById::Round::judges": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/judges/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Round.judges.link() instead.
+        "::link::Round::judges": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/judges/rel/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Round.judges.unlink() instead.
+        "::unlink::Round::judges": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/judges/rel/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Round.judges.exists() instead.
+        "::exists::Round::judges": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Rounds/:id/judges/rel/:fk",
+          method: "HEAD"
+        },
+
+        // INTERNAL. Use Round.admins() instead.
+        "::get::Round::admins": {
+          isArray: true,
+          url: urlBase + "/Rounds/:id/admins",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Round.admins.create() instead.
+        "::create::Round::admins": {
+          url: urlBase + "/Rounds/:id/admins",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Round.admins.createMany() instead.
+        "::createMany::Round::admins": {
+          isArray: true,
+          url: urlBase + "/Rounds/:id/admins",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Round.admins.destroyAll() instead.
+        "::delete::Round::admins": {
+          url: urlBase + "/Rounds/:id/admins",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Round.admins.count() instead.
+        "::count::Round::admins": {
+          url: urlBase + "/Rounds/:id/admins/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Round.judges() instead.
+        "::get::Round::judges": {
+          isArray: true,
+          url: urlBase + "/Rounds/:id/judges",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Round.judges.create() instead.
+        "::create::Round::judges": {
+          url: urlBase + "/Rounds/:id/judges",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Round.judges.createMany() instead.
+        "::createMany::Round::judges": {
+          isArray: true,
+          url: urlBase + "/Rounds/:id/judges",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Round.judges.destroyAll() instead.
+        "::delete::Round::judges": {
+          url: urlBase + "/Rounds/:id/judges",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Round.judges.count() instead.
+        "::count::Round::judges": {
+          url: urlBase + "/Rounds/:id/judges/count",
           method: "GET"
         },
       }
@@ -31814,6 +33018,42 @@ module.factory(
 
         /**
          * @ngdoc method
+         * @name lbServices.Group.programs#exists
+         * @methodOf lbServices.Group.programs
+         *
+         * @description
+         *
+         * Check the existence of programs relation to an item by id.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for programs
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Program` object.)
+         * </em>
+         */
+        R.programs.exists = function() {
+          var TargetResource = $injector.get("Program");
+          var action = TargetResource["::exists::Group::programs"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
          * @name lbServices.Group.programs#findById
          * @methodOf lbServices.Group.programs
          *
@@ -31845,6 +33085,79 @@ module.factory(
         R.programs.findById = function() {
           var TargetResource = $injector.get("Program");
           var action = TargetResource["::findById::Group::programs"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.programs#link
+         * @methodOf lbServices.Group.programs
+         *
+         * @description
+         *
+         * Add a related item by id for programs.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for programs
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Program` object.)
+         * </em>
+         */
+        R.programs.link = function() {
+          var TargetResource = $injector.get("Program");
+          var action = TargetResource["::link::Group::programs"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Group.programs#unlink
+         * @methodOf lbServices.Group.programs
+         *
+         * @description
+         *
+         * Remove the programs relation to an item by id.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for programs
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.programs.unlink = function() {
+          var TargetResource = $injector.get("Program");
+          var action = TargetResource["::unlink::Group::programs"];
           return action.apply(R, arguments);
         };
 
