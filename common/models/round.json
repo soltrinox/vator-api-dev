@@ -29,6 +29,16 @@
           "type": "hasAndBelongsToMany",
           "model": "Application",
           "foreignKey": ""
+        },
+        "admins": {
+          "type": "hasAndBelongsToMany",
+          "model": "Group",
+          "foreignKey": ""
+        },
+        "judges": {
+          "type": "hasAndBelongsToMany",
+          "model": "Group",
+          "foreignKey": ""
         }
       },
       "acls": [],

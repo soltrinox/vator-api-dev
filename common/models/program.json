@@ -20,7 +20,7 @@
     },
     "validations": [],
       "relations": {
-        "teams": {
+        "admins": {
           "type": "belongsTo",
           "model": "Group",
           "foreignKey": ""

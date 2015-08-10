@@ -1,5 +1,6 @@
 {
   "name": "Team",
+  "plural": "Teams",
   "base": "PersistedModel",
   "strict": false,
   "idInjection": false,

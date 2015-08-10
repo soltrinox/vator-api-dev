@@ -1,5 +1,6 @@
 {
   "name": "Group",
+  "plural": "Groups",
   "base": "PersistedModel",
   "strict": false,
   "idInjection": false,
@@ -18,6 +19,9 @@
     },
     "owner": {
       "type":"string"
+    },
+    "type": {
+      "type":"string"
     }
   },
   "validations": [],
@@ -28,7 +32,7 @@
       "foreignKey": ""
     },
     "programs": {
-      "type": "hasMany",
+      "type": "hasAndBelongsToMany",
       "model": "Program",
       "foreignKey": ""
     }
