@@ -14,9 +14,18 @@
       "Name": {
         "type": "string"
       },
+      "Details": {
+        "type": "object"
+      },
+      "Image": {
+        "type": "string"
+      },
       "Owner": {
         "type": "string"
-      }
+      },
+      "updated": {
+        "type": "date"
+      },
     },
     "validations": [],
       "relations": {
