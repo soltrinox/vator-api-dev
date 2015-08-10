@@ -118,6 +118,22 @@
     "dataSource": "MONGOLOCAL",
     "public": true
   },
+  "Program": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Application": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Round": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
+  "Group": {
+    "dataSource": "MONGOLOCAL",
+    "public": true
+  },
   "Media": {
     "dataSource": "MONGOLOCAL",
     "public": true
