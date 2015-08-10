@@ -56,8 +56,7 @@
       "type": "hasAndBelongsToMany",
       "model": "Product",
       "foreignKey": ""
-    },
-
+    }
   },
   "acls": [],
   "methods": []
