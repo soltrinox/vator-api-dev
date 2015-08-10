@@ -47,11 +47,17 @@
       "model": "Profile",
       "foreignKey": ""
     },
+    "applications": {
+      "type": "hasAndBelongsToMany",
+      "model": "Application",
+      "foreignKey": ""
+    },
     "projects": {
       "type": "hasAndBelongsToMany",
       "model": "Product",
       "foreignKey": ""
-    }
+    },
+
   },
   "acls": [],
   "methods": []

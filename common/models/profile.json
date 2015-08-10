@@ -37,6 +37,11 @@
       "model": "Team",
       "foreignKey": ""
     },
+    "groups": {
+      "type": "hasAndBelongsToMany",
+      "model": "Group",
+      "foreignKey": ""
+    },
     "education": {
       "type": "hasMany",
       "model": "Education",

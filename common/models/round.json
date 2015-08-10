@@ -1,0 +1,36 @@
+{
+  "name": "Round",
+  "plural": "Rounds",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+      "Created": {
+        "type": "date"
+      },
+      "Name": {
+        "type": "string"
+      },
+      "Owner": {
+        "type": "string"
+      }
+    },
+    "validations": [],
+      "relations": {
+        "program": {
+          "type": "belongsTo",
+          "model": "Program",
+          "foreignKey": ""
+        },
+        "applications": {
+          "type": "hasAndBelongsToMany",
+          "model": "Application",
+          "foreignKey": ""
+        }
+      },
+      "acls": [],
+      "methods": []
+    }

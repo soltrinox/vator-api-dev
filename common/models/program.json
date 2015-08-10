@@ -1,0 +1,36 @@
+{
+  "name": "Program",
+  "plural": "Programs",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+      "Created": {
+        "type": "date"
+      },
+      "Name": {
+        "type": "string"
+      },
+      "Owner": {
+        "type": "string"
+      }
+    },
+    "validations": [],
+      "relations": {
+        "teams": {
+          "type": "belongsTo",
+          "model": "Group",
+          "foreignKey": ""
+        },
+        "rounds": {
+          "type": "hasMany",
+          "model": "Round",
+          "foreignKey": ""
+        }
+      },
+      "acls": [],
+      "methods": []
+    }

@@ -1,5 +1,5 @@
 {
-  "name": "keys",
+  "name": "Group",
   "base": "PersistedModel",
   "strict": false,
   "idInjection": false,
@@ -7,24 +7,29 @@
     "validateUpsert": true
   },
   "properties": {
-    "kname": {
+    "name": {
       "type": "string"
     },
-    "link": {
-      "type": "string"
+    "created": {
+      "type": "date"
     },
-    "type": {
-      "type": "string"
+    "updated": {
+      "type": "date"
     },
-    "parent": {
-      "type": "string"
+    "owner": {
+      "type":"string"
     }
   },
   "validations": [],
   "relations": {
-    "profiles": {
+    "members": {
       "type": "hasAndBelongsToMany",
       "model": "Profile",
+      "foreignKey": ""
+    },
+    "programs": {
+      "type": "hasMany",
+      "model": "Program",
       "foreignKey": ""
     }
   },

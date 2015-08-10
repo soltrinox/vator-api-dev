@@ -1,0 +1,39 @@
+{
+  "name": "Application",
+  "plural": "Applications",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "details": {
+      "type": "object"
+    },
+    "created": {
+      "type": "date"
+    },
+    "updated": {
+      "type": "date"
+    },
+   "active": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "round": {
+      "type": "hasAndBelongsToMany",
+      "model": "Round",
+      "foreignKey": ""
+    },
+    "company": {
+      "type": "hasAndBelongsToMany",
+      "model": "Team",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}
