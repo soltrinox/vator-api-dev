@@ -86,22 +86,35 @@ module.exports = function(Product, Team) {
       if(err) {
         console.log(err);
       } else {
-        product.teams({ productId:id },function(err, xteams){
-          console.log('PROD TEAMS %j', xteams[0]);
-          var tteamId = xteams[0].id;
-          app.models.Team.getPartCompany(  tteamId ,function(err, iteam){
-            if(err) {
-              console.log(err);
-            } else {
-              console.log('PART FIRST TEAMS %j', iteam);
-              var response = {
-                    details: product,
-                    team : iteam
-              };
-              cb(null, response);
-            }
+        console.log('FULL PROD FOUND: \n'+product);
+        if(!product.teams || 0 === product.teams){
+          console.log(' NO TEAMS FOUND' );
+          var response = {
+                details: product
+          };
+          cb(null, response);
+        }else{
+          console.log( 'TEAMS FOUND : \n' + product.teams );
+          product.teams({ productId:id },function(err, xteams){
+              console.log('PROD TEAMS %j', xteams);
+              var tteamId = xteams[0].id;
+              app.models.Team.getPartCompany(  tteamId ,function(err, iteam){
+                if(err) {
+                  console.log(err);
+                } else {
+                  console.log('PART FIRST TEAMS %j', iteam);
+                  var response = {
+                        details: product,
+                        team : iteam
+                  };
+                  cb(null, response);
+                }
+              });
           });
-        });
+
+        }
+
+
       }
     });
   };
