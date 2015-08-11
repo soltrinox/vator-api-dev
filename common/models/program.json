@@ -14,8 +14,14 @@
       "Name": {
         "type": "string"
       },
-      "Details": {
-        "type": "object"
+      "Brief": {
+        "type": "string"
+      },
+      "Desc": {
+        "type": "string"
+      },
+      "Brief": {
+        "type": "string"
       },
       "Image": {
         "type": "string"
