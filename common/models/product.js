@@ -86,7 +86,7 @@ module.exports = function(Product, Team) {
       if(err) {
         console.log(err);
       } else {
-        console.log('FULL PROD FOUND: \n'+product);
+        console.log('FULL PROD FOUND: \n  %j', product);
         if(!product.teams || 0 === product.teams){
           console.log(' NO TEAMS FOUND' );
           var response = {
@@ -94,27 +94,34 @@ module.exports = function(Product, Team) {
           };
           cb(null, response);
         }else{
-          console.log( 'TEAMS FOUND : \n' + product.teams );
+          console.log( 'TEAMS FOUND : \n %j' , product.teams );
           product.teams({ productId:id },function(err, xteams){
-              console.log('PROD TEAMS %j', xteams);
-              var tteamId = xteams[0].id;
-              app.models.Team.getPartCompany(  tteamId ,function(err, iteam){
-                if(err) {
-                  console.log(err);
-                } else {
-                  console.log('PART FIRST TEAMS %j', iteam);
-                  var response = {
-                        details: product,
-                        team : iteam
-                  };
-                  cb(null, response);
-                }
-              });
+
+            if(err) {
+              console.log(err);
+            }else{
+
+              if(!xteams || 0 === xteams.length){
+                console.log('NO PROD TEAMS %j', xteams);
+              }else{
+                console.log('PROD TEAMS %j', xteams);
+                var tteamId = xteams[0].id;
+                app.models.Team.getPartCompany(  tteamId ,function(err, iteam){
+                  if(err) {
+                    console.log(err);
+                  } else {
+                    console.log('PART FIRST TEAMS %j', iteam);
+                    var response = {
+                          details: product,
+                          team : iteam
+                    };
+                    cb(null, response);
+                  }
+                });
+              }
+            }
           });
-
         }
-
-
       }
     });
   };
