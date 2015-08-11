@@ -99,10 +99,15 @@ module.exports = function(Product, Team) {
 
             if(err) {
               console.log(err);
+              var response = {
+                    details: product
+              };
+              cb(null, err);
             }else{
 
               if(!xteams || 0 === xteams.length){
                 console.log('NO PROD TEAMS %j', xteams);
+                cb(null, {   details: product });
               }else{
                 console.log('PROD TEAMS %j', xteams);
                 var tteamId = xteams[0].id;
