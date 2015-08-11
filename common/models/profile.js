@@ -1,5 +1,7 @@
 'use strict';
-module.exports = function(Profile, Team) {
+module.exports = function(Profile) {
+
+  Profile.validatesUniquenessOf('UUID');
 
   Profile.getEntireProfile = function(id,cb) {
     var app = Profile.app;
