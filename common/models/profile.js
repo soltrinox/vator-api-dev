@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function(Profile) {
 
-  Profile.validatesUniquenessOf('UUID');
+  Profile.validatesUniquenessOf('UUID', {message: 'UUID EXISTS'});
 
   Profile.getEntireProfile = function(id,cb) {
     var app = Profile.app;
