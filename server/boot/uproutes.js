@@ -36,7 +36,7 @@ server.get('/uploadimage', function(req, res, next) {
 
 server.post('/uploadprofile/:container/:pid', function(req, res, next) {
   var type = 'profile';
-  var options = 
+  var options =
   {
     container: 'vatorprofilecache'  ,
     getFilename: function(fileInfo, req, res) {
@@ -125,6 +125,7 @@ server.post('/uploadmedia/:container/:pid', function(req, res, next) {
         responseMessage.pid = req.params.pid;
         responseMessage.type = 'media';
         responseMessage.fields = req.params;
+        responseMessage.name = result.files.file[0].name;
 
       res.setHeader('Content-Type', 'application/json');
       res.status(200).send(responseMessage);
