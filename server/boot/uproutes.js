@@ -53,10 +53,11 @@ server.post('/uploadprofile/:container/:pid', function(req, res, next) {
     if (!err) {
 
       var responseMessage = {};
-	responseMessage.result = result.files.file[0];
-	responseMessage.pid = req.params.pid;
-	responseMessage.type = 'profilePic';
-        responseMessage.fields = req.params;
+      responseMessage.result = result.files.file[0];
+      responseMessage.pid = req.params.pid;
+      responseMessage.type = 'profilePic';
+      responseMessage.fields = req.params;
+      responseMessage.name = result.files.file[0].name;
 
       res.setHeader('Content-Type', 'application/json');
       res.status(200).send(responseMessage);
@@ -86,11 +87,12 @@ server.post('/uploadcover/:container/:pid', function(req, res, next) {
   handler.upload(req, res, options, function(err, result){
     if (!err) {
 
-        var responseMessage = {};
-        responseMessage.result = result.files.file[0];
-        responseMessage.pid = req.params.pid;
-        responseMessage.type = 'coverPic';
-	responseMessage.fields = req.params;
+      var responseMessage = {};
+      responseMessage.result = result.files.file[0];
+      responseMessage.pid = req.params.pid;
+      responseMessage.type = 'coverPic';
+      responseMessage.fields = req.params;
+      responseMessage.name = result.files.file[0].name;
 
       res.setHeader('Content-Type', 'application/json');
       res.status(200).send(responseMessage);
