@@ -69,6 +69,7 @@ server.post('/uploadprofile/:container/:pid', function(req, res, next) {
 
 server.post('/uploadadminprofile/:container/:pid', function(req, res, next) {
   var type = 'profile';
+  var fileName = '';
   var options =
   {
     container: 'vatorprofilecache'  ,
@@ -77,7 +78,8 @@ server.post('/uploadadminprofile/:container/:pid', function(req, res, next) {
         var parts = origFilename.split('.'),
             extension = parts[parts.length-1];
   	    console.log(req.params.filename);
-        return req.params.filename +'.' +  extension   ;
+        fileName = req.params.filename +'.' +  extension ;
+    return  fileName ;
     }
   };
 
@@ -90,7 +92,7 @@ server.post('/uploadadminprofile/:container/:pid', function(req, res, next) {
       responseMessage.pid = req.params.pid;
       responseMessage.type = 'profilePic';
       responseMessage.fields = req.params;
-      responseMessage.name = result.files.file[0].name;
+      responseMessage.name = fileName;
 
       res.setHeader('Content-Type', 'application/json');
       res.status(200).send(responseMessage);
@@ -139,6 +141,7 @@ server.post('/uploadcover/:container/:pid', function(req, res, next) {
 
 server.post('/uploadadmincover/:container/:pid', function(req, res, next) {
   var type = 'cover';
+    var fileName = '';
   var options =
   {
     container: 'vatorprofilecache'  ,
@@ -147,7 +150,8 @@ server.post('/uploadadmincover/:container/:pid', function(req, res, next) {
         var parts = origFilename.split('.'),
             extension = parts[parts.length-1];
             console.log(req.params.filename);
-        return req.params.filename +'.' +  extension   ;
+            fileName = req.params.filename +'.' +  extension ;
+        return  fileName ;
     }
   };
 
@@ -160,7 +164,7 @@ server.post('/uploadadmincover/:container/:pid', function(req, res, next) {
       responseMessage.pid = req.params.pid;
       responseMessage.type = 'coverPic';
       responseMessage.fields = req.params;
-      responseMessage.name = result.files.file[0].name;
+      responseMessage.name = fileName;
 
       res.setHeader('Content-Type', 'application/json');
       res.status(200).send(responseMessage);
