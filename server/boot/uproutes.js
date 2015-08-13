@@ -77,8 +77,8 @@ server.post('/uploadadminprofile/:container/:pid', function(req, res, next) {
         var origFilename = fileInfo.name;
         var parts = origFilename.split('.'),
             extension = parts[parts.length-1];
-  	    console.log(req.params.filename);
-        fileName = req.params.filename +'.' +  extension ;
+  	    console.log(req.params.fileName);
+        fileName = req.params.fileName +'.' +  extension ;
     return  fileName ;
     }
   };
@@ -149,8 +149,8 @@ server.post('/uploadadmincover/:container/:pid', function(req, res, next) {
         var origFilename = fileInfo.name;
         var parts = origFilename.split('.'),
             extension = parts[parts.length-1];
-            console.log(req.params.filename);
-            fileName = req.params.filename +'.' +  extension ;
+            console.log(req.params.fileName);
+            fileName = req.params.fileName +'.' +  extension ;
         return  fileName ;
     }
   };
