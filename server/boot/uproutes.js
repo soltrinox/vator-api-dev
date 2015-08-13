@@ -67,6 +67,39 @@ server.post('/uploadprofile/:container/:pid', function(req, res, next) {
   });
 });
 
+server.post('/uploadadminprofile/:container/:pid', function(req, res, next) {
+  var type = 'profile';
+  var options =
+  {
+    container: 'vatorprofilecache'  ,
+    getFilename: function(fileInfo, req, res) {
+        var origFilename = fileInfo.name;
+        var parts = origFilename.split('.'),
+            extension = parts[parts.length-1];
+  	    console.log(req.params.fileName);
+        return uuid.v4() + '-'+  type +'.' +  extension   ;
+    }
+  };
+
+//  console.log('POST: '+ JSON.stringify( options) );
+  handler.upload(req, res, options, function(err, result){
+    if (!err) {
+
+      var responseMessage = {};
+      responseMessage.result = result.files.file[0];
+      responseMessage.pid = req.params.pid;
+      responseMessage.type = 'profilePic';
+      responseMessage.fields = req.params;
+      responseMessage.name = result.files.file[0].name;
+
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).send(responseMessage);
+    } else {
+      res.status(500).send(err);
+    }
+  });
+});
+
 
 
 server.post('/uploadcover/:container/:pid', function(req, res, next) {
@@ -78,7 +111,42 @@ server.post('/uploadcover/:container/:pid', function(req, res, next) {
         var origFilename = fileInfo.name;
         var parts = origFilename.split('.'),
             extension = parts[parts.length-1];
-        //return '-'+ type +'.' +  extension   ;
+
+        return uuid.v4() + '-'+  type +'.' +  extension   ;
+    }
+  };
+
+//  console.log('POST: '+ JSON.stringify( options) );
+  handler.upload(req, res, options, function(err, result){
+    if (!err) {
+
+      var responseMessage = {};
+      responseMessage.result = result.files.file[0];
+      responseMessage.pid = req.params.pid;
+      responseMessage.type = 'coverPic';
+      responseMessage.fields = req.params;
+      responseMessage.name = result.files.file[0].name;
+
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).send(responseMessage);
+
+    } else {
+      res.status(500).send(err);
+    }
+  });
+});
+
+
+server.post('/uploadadmincover/:container/:pid', function(req, res, next) {
+  var type = 'cover';
+  var options =
+  {
+    container: 'vatorprofilecache'  ,
+    getFilename: function(fileInfo, req, res) {
+        var origFilename = fileInfo.name;
+        var parts = origFilename.split('.'),
+            extension = parts[parts.length-1];
+            console.log(req.params.fileName);
         return uuid.v4() + '-'+  type +'.' +  extension   ;
     }
   };
