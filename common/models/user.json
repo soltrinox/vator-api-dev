@@ -2,7 +2,12 @@
   "name": "user",
   "plural": "users",
   "base": "User",
-  "properties": {},
+  "properties": {
+    "vatorX": {
+      "type": "string",
+      "required": false
+    }
+  },
   "validations": [],
   "relations": {
     "accessTokens": {
