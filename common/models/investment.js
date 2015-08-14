@@ -15,6 +15,9 @@ module.exports = function(Investment) {
         console.log('NO EXIT DATE');
         ctx.instance.exitdate = Date.now();
       }
+      ctx.instance.created = Date.now();
+      ctx.instance.date = Date.now();
+      ctx.instance.exitdate = Date.now();
       ctx.instance.updated = Date.now();
     }
     next();
