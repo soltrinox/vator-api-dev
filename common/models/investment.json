@@ -16,6 +16,12 @@
     "amount": {
       "type": "string"
     },
+    "created": {
+      "type": "date"
+    },
+    "updated": {
+      "type": "date"
+    },
     "date": {
       "type": "date"
     },

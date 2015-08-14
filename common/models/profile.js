@@ -3,6 +3,16 @@ module.exports = function(Profile) {
 
   Profile.validatesUniquenessOf('UUID', {message: 'UUID EXISTS'});
 
+  Profile.observe('before save', function setDefaultUsername(ctx, next) {
+    if (ctx.instance) {
+      if(!ctx.instance.Created){
+        ctx.instance.Created = Date.now();
+      }
+      ctx.instance.updated = Date.now();
+    }
+    next();
+  });
+
   Profile.getEntireProfile = function(id,cb) {
     var app = Profile.app;
     Profile.findById(id,  function(err, profile) {

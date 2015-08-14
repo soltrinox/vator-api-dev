@@ -8,6 +8,12 @@
     },
     "categoryId": {
       "type": "string"
+    },
+    "Created": {
+      "type": "date"
+    },
+    "updated" : {
+      "type":"date"
     }
   },
   "validations": [],

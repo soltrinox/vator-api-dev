@@ -10,6 +10,12 @@
     "companyname": {
       "type": "string"
     },
+    "Created": {
+      "type": "date"
+    },
+    "updated" : {
+      "type":"date"
+    },
     "jobtitle": {
       "type": "string"
     },

@@ -31,6 +31,12 @@ module.exports = function(Product, Team) {
 
   Product.observe('before save', function (ctx, next) {
     if (ctx.instance) {
+
+      if(!ctx.instance.Created){
+        ctx.instance.Created = Date.now();
+      }
+      ctx.instance.updated = Date.now();
+
       if(!ctx.instance.companyId || 0 === ctx.instance.companyId ){
         isNewCompany = true;
       }
@@ -55,6 +61,9 @@ module.exports = function(Product, Team) {
 
     next();
   });
+
+
+
 
 
 

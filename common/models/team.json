@@ -11,6 +11,12 @@
     "Name": {
       "type": "string"
     },
+    "Created": {
+      "type": "date"
+    },
+    "updated" : {
+      "type":"date"
+    },
     "URL": {
       "type": "string"
     },

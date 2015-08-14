@@ -10,6 +10,9 @@
     "Created": {
       "type": "date"
     },
+    "updated": {
+      "type": "date"
+    },
     "Name": {
       "type": "string"
     },
