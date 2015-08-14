@@ -3,6 +3,10 @@ module.exports = function(Investment) {
 
   Investment.observe('before save', function setDefaultUsername(ctx, next) {
     if (ctx.instance) {
+
+      console.log(JSON.stringify(ctx.instance));
+
+
       if(!ctx.instance.created || ctx.instance.created.length === 0 || ctx.instance.created === ''){
         console.log('NO CREATED DATE');
         ctx.instance.created = Date.now();
