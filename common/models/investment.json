@@ -34,19 +34,19 @@
     "valuation": {
       "type": "string"
     },
-   "transaction": {
+    "transaction": {
       "type": "string"
     },
-   "amount2": {
+    "amount2": {
       "type": "string"
     },
-   "aquirer": {
+    "aquirer": {
       "type": "string"
     },
-   "press": {
+    "press": {
       "type": "string"
     },
-   "isipo": {
+    "isipo": {
       "type": "string"
     }
   },

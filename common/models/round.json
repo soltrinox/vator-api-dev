@@ -8,39 +8,39 @@
     "validateUpsert": true
   },
   "properties": {
-      "Created": {
-        "type": "date"
-      },
-      "Name": {
-        "type": "string"
-      },
-      "Owner": {
-        "type": "string"
-      }
+    "Created": {
+      "type": "date"
     },
-    "validations": [],
-      "relations": {
-        "program": {
-          "type": "belongsTo",
-          "model": "Program",
-          "foreignKey": ""
-        },
-        "applications": {
-          "type": "hasAndBelongsToMany",
-          "model": "Application",
-          "foreignKey": ""
-        },
-        "admins": {
-          "type": "hasAndBelongsToMany",
-          "model": "Group",
-          "foreignKey": ""
-        },
-        "judges": {
-          "type": "hasAndBelongsToMany",
-          "model": "Group",
-          "foreignKey": ""
-        }
-      },
-      "acls": [],
-      "methods": []
+    "Name": {
+      "type": "string"
+    },
+    "Owner": {
+      "type": "string"
     }
+  },
+  "validations": [],
+  "relations": {
+    "program": {
+      "type": "belongsTo",
+      "model": "Program",
+      "foreignKey": ""
+    },
+    "applications": {
+      "type": "hasAndBelongsToMany",
+      "model": "Application",
+      "foreignKey": ""
+    },
+    "admins": {
+      "type": "hasAndBelongsToMany",
+      "model": "Group",
+      "foreignKey": ""
+    },
+    "judges": {
+      "type": "hasAndBelongsToMany",
+      "model": "Group",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

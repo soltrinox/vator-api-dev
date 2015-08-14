@@ -14,8 +14,8 @@
     "Created": {
       "type": "date"
     },
-    "updated" : {
-      "type":"date"
+    "updated": {
+      "type": "date"
     },
     "URL": {
       "type": "string"
@@ -27,24 +27,24 @@
       "type": "string"
     },
     "tags": {
-      "type":[
-         "object"
-       ]
+      "type": [
+        "object"
+      ]
     },
     "cats": {
-      "type":[
-         "object"
-       ]
+      "type": [
+        "object"
+      ]
     },
     "owner": {
       "type": [
-         "object"
-       ]
+        "object"
+      ]
     },
     "location": {
       "type": [
-         "object"
-       ]
+        "object"
+      ]
     }
   },
   "validations": [],

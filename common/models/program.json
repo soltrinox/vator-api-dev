@@ -8,47 +8,41 @@
     "validateUpsert": true
   },
   "properties": {
-      "Created": {
-        "type": "date"
-      },
-      "updated" : {
-        "type":"date"
-      },
-      "Name": {
-        "type": "string"
-      },
-      "Brief": {
-        "type": "string"
-      },
-      "Desc": {
-        "type": "string"
-      },
-      "Brief": {
-        "type": "string"
-      },
-      "Image": {
-        "type": "string"
-      },
-      "Owner": {
-        "type": "string"
-      },
-      "updated": {
-        "type": "date"
-      }
+    "Created": {
+      "type": "date"
     },
-    "validations": [],
-      "relations": {
-        "admins": {
-          "type": "hasAndBelongsToMany",
-          "model": "Group",
-          "foreignKey": ""
-        },
-        "rounds": {
-          "type": "hasMany",
-          "model": "Round",
-          "foreignKey": ""
-        }
-      },
-      "acls": [],
-      "methods": []
+    "updated": {
+      "type": "date"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Brief": {
+      "type": "string"
+    },
+    "Desc": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "string"
+    },
+    "Owner": {
+      "type": "string"
     }
+  },
+  "validations": [],
+  "relations": {
+    "admins": {
+      "type": "hasAndBelongsToMany",
+      "model": "Group",
+      "foreignKey": ""
+    },
+    "rounds": {
+      "type": "hasMany",
+      "model": "Round",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": []
+}

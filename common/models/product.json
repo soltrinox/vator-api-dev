@@ -12,8 +12,8 @@
     "Created": {
       "type": "date"
     },
-    "updated" : {
-      "type":"date"
+    "updated": {
+      "type": "date"
     }
   },
   "validations": [],
